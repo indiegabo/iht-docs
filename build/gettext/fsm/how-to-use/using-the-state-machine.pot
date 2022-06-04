@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IndieGabo
+# This file is distributed under the same license as the IndieGabo's Handy Tools package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IndieGabo's Handy Tools \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-04 15:59-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:4
+msgid "Using the state machine"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:7
+msgid "Behold: THE STATE MACHINE!!!"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:9
+msgid "Now that we know how to :ref:`setup an a actor <setting-up-an-actor-class>` and how to :ref:`create its states <creating-states-for-an-actor-page>` we can finally use the state machine."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:12
+msgid "The :ref:`StateMachine <state-machine-class>` component, different from the actors and states, is a ready to use component. So you do not need to worry about creating any script for it. Just attach to a GameObject, attach states to the same GameObject, set a default state and you are good to go."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:15
+msgid "But, if you want to understand a little about it// Some other code Let's do it!"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:20
+msgid "Life Cycle"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:22
+msgid "Let's take a look at the machine's Life Cycle:"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:-1
+msgid "Creating actor script from menu"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:30
+msgid "The ``StateMachine`` at its current version has 5 statuses: ``Off``, ``Loading``, ``Ready``, ``On`` and ``Paused``. They are declared as the enum ``IndieGabo.FSM.MachineStatus``."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:33
+msgid "I'd like to focus some attention on these steps:"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:35
+msgid "The machine first ``StateMachine.status`` is ``MachineStatus.Off``."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:37
+msgid "Note that although our machine belongs to MonoBehaviour, it is the :ref:`Actor <actor-class>` wich sets up the machine. That is because the machine can only start operating when the actor is already awake. Once Awake, the actor calls ``StateMachine.SetUp()`` letting it know who its actor is."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:41
+msgid "At this point the machine will change ``StateMachine.status`` from ``MachineStatus.Off`` to ``MachineStatus.Loading``."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:43
+msgid "Here the machine will load up all the states attached into its GameObject and call subsequently all of the attached states ``State.OnLoad()`` followed by their ``State.SortTransitions()``. This last method makes sure transitions priorities get in order. This is the importancy of registering any :ref:`StateTranstion <state-transition-class>` of your state inside its ``State.OnLoad()``."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:47
+msgid "Now the machine will change ``StateMachine.status`` from ``MachineStatus.Loading`` to ``MachineStatus.Ready``."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:49
+msgid "Once ready, the machine will start by using ``StateMachine.ChangeState()`` to set the chosen default state (At the inspector. By you. Do not forget to do it)."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:52
+msgid "The machine will finally change ``StateMachine.status`` from ``MachineStatus.Ready`` to ``MachineStatus.On`` and it is running!!! Hurray!"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:55
+msgid "Tickers Methods and Machine Statuses"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:57
+msgid "Once the machine has started, meaning its ``StateMachine.status`` is ``MachineStatus.On``, it will proceed passing forward the tickers methods (called inside the actor's \"frame handlers\") to the current state. As long as the ``StateMachine.status`` is ``MachineStatus.On`` it will do so."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:60
+msgid "If at any time you need to pause this behaviour, you can call ``StateMachine.Pause()`` and it will set ``StateMachine.status`` to ``MachineStatus.Paused``. Consequently, none of the tickers will be passed forward to the current state, therefore we can considered it as paused."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:74
+msgid "To unpause, simply call ``StateMachine.Resume()`` and the ``StateMachine.status`` will be ``MachineStatus.On`` again."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:88
+msgid "Setting up the machine"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:90
+msgid "You can simply create a single GameObject and attach the :ref:`StateMachine <state-machine-class>` component into it. Same goes for the :ref:`Actor <actor-class>`. Take a look:"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:101
+msgid "But, as the actor's GameObject tends to have multiple components attached into it, for the sake of organization, i find more convenient to proceed creating an GameObject for the actor and use the machine as its child. Check it out:"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:112
+msgid "Both strategies will work transparently for you. Just choose yours."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:114
+msgid "As you could observe, i've prepared a menu item for you to put a new state machine into your hierarchy. But if you wish to attach the :ref:`StateMachine <state-machine-class>` component into any GameObject, feel free to search for it using the \"Add Component\" inspector button."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:118
+msgid "All set!"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:120
+msgid "Checkout the API documentation if you want to know more about these classes. For now, i'd say you have all the tools needed to start benefiting from the state machine!"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:123
+msgid "HURRAY!! Go do something awesome and let me know about it!"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/using-the-state-machine.rst:-1
+msgid "Gabinho Waving"
+msgstr ""

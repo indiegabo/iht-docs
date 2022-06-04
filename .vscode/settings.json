@@ -1,0 +1,6 @@
+{
+    "files.exclude":
+    {
+        "**/*.mo":true,
+    }
+}
