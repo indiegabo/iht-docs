@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using the state machine &mdash; IndieGabo&#39;s Handy Tools b0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/styles/indiegabo.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/dark_mode_js/default_dark.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parent States" href="parent-states.html" />
+    <link rel="prev" title="Creating States for an Actor" href="creating-states-for-an-actor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> IndieGabo's Handy Tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../first-steps/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Available Features</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../welcome.html">FSM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#what-is-a-finite-state-machine">What is a Finite State Machine?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#why-this-fsm">Why this FSM?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../welcome.html#how-to-use">How to use</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setting-up-an-actor.html">Setting up an Actor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="creating-states-for-an-actor.html">Creating States for an Actor</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Using the state machine</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#behold-the-state-machine">Behold: THE STATE MACHINE!!!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#life-cycle">Life Cycle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tickers-methods-and-machine-statuses">Tickers Methods and Machine Statuses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-the-machine">Setting up the machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#all-set">All set!</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="parent-states.html">Parent States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../character-controller-2d/welcome.html">CharacterController2D</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">IndieGabo's Handy Tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../welcome.html">FSM</a> &raquo;</li>
+      <li>Using the state machine</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/fsm/how-to-use/using-the-state-machine.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-the-state-machine">
+<span id="using-the-state-machine-class"></span><h1>Using the state machine<a class="headerlink" href="#using-the-state-machine" title="Permalink to this headline"></a></h1>
+<section id="behold-the-state-machine">
+<h2>Behold: THE STATE MACHINE!!!<a class="headerlink" href="#behold-the-state-machine" title="Permalink to this headline"></a></h2>
+<p>Now that we know how to <a class="reference internal" href="setting-up-an-actor.html#setting-up-an-actor-class"><span class="std std-ref">setup an a actor</span></a> and how to <a class="reference internal" href="creating-states-for-an-actor.html#creating-states-for-an-actor-page"><span class="std std-ref">create its states</span></a>
+we can finally use the state machine.</p>
+<p>The <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> component, different from the actors and states, is a ready to use component. So you do not need to worry about creating any
+script for it. Just attach to a GameObject, attach states to the same GameObject, set a default state and you are good to go.</p>
+<p>But, if you want to understand a little about it// Some other code Let’s do it!</p>
+</section>
+<section id="life-cycle">
+<span id="lifecycle"></span><h2>Life Cycle<a class="headerlink" href="#life-cycle" title="Permalink to this headline"></a></h2>
+<p>Let’s take a look at the machine’s Life Cycle:</p>
+<a class="reference internal image-reference" href="../../_images/life-cycle.jpg"><img alt="Creating actor script from menu" src="../../_images/life-cycle.jpg" style="width: 600px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">StateMachine</span></code> at its current version has 5 statuses: <code class="docutils literal notranslate"><span class="pre">Off</span></code>, <code class="docutils literal notranslate"><span class="pre">Loading</span></code>, <code class="docutils literal notranslate"><span class="pre">Ready</span></code>, <code class="docutils literal notranslate"><span class="pre">On</span></code> and <code class="docutils literal notranslate"><span class="pre">Paused</span></code>. They are declared as the enum
+<code class="docutils literal notranslate"><span class="pre">IndieGabo.FSM.MachineStatus</span></code>.</p>
+</div>
+<p>I’d like to focus some attention on these steps:</p>
+<ol class="arabic simple">
+<li><p>The machine first <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> is <code class="docutils literal notranslate"><span class="pre">MachineStatus.Off</span></code>.</p></li>
+</ol>
+<p>Note that although our machine belongs to MonoBehaviour, it is the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> wich sets up the machine. That
+is because the machine can only start operating when the actor is already awake. Once Awake, the actor calls <code class="docutils literal notranslate"><span class="pre">StateMachine.SetUp()</span></code>
+letting it know who its actor is.</p>
+<ol class="arabic simple" start="2">
+<li><p>At this point the machine will change <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> from <code class="docutils literal notranslate"><span class="pre">MachineStatus.Off</span></code> to <code class="docutils literal notranslate"><span class="pre">MachineStatus.Loading</span></code>.</p></li>
+</ol>
+<p>Here the machine will load up all the states attached into its GameObject and call subsequently all of the attached states <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code>
+followed by their <code class="docutils literal notranslate"><span class="pre">State.SortTransitions()</span></code>. This last method makes sure transitions priorities get in order. This is the importancy of registering any
+<a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTranstion</span></a> of your state inside its <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Now the machine will change <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> from <code class="docutils literal notranslate"><span class="pre">MachineStatus.Loading</span></code> to <code class="docutils literal notranslate"><span class="pre">MachineStatus.Ready</span></code>.</p></li>
+</ol>
+<p>Once ready, the machine will start by using <code class="docutils literal notranslate"><span class="pre">StateMachine.ChangeState()</span></code> to set the chosen default state (At the inspector. By you. Do not forget
+to do it).</p>
+<ol class="arabic simple" start="4">
+<li><p>The machine will finally change <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> from <code class="docutils literal notranslate"><span class="pre">MachineStatus.Ready</span></code> to <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code> and it is running!!! Hurray!</p></li>
+</ol>
+</section>
+<section id="tickers-methods-and-machine-statuses">
+<h2>Tickers Methods and Machine Statuses<a class="headerlink" href="#tickers-methods-and-machine-statuses" title="Permalink to this headline"></a></h2>
+<p>Once the machine has started, meaning its <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> is <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code>, it will proceed passing forward the tickers methods (called inside the
+actor’s “frame handlers”) to the current state. As long as the <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> is <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code> it will do so.</p>
+<p>If at any time you need to pause this behaviour, you can call <code class="docutils literal notranslate"><span class="pre">StateMachine.Pause()</span></code> and it will set <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> to <code class="docutils literal notranslate"><span class="pre">MachineStatus.Paused</span></code>.
+Consequently, none of the tickers will be passed forward to the current state, therefore we can considered it as paused.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code from inside a state</span>
+
+<span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Tick</span><span class="p">()</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">machine</span><span class="p">.</span><span class="n">Pause</span><span class="p">();</span><span class="w"> </span><span class="c1">// Pausing the machine</span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="w"> </span><span class="c1">// Some other code</span>
+</pre></div>
+</div>
+<p>To unpause, simply call <code class="docutils literal notranslate"><span class="pre">StateMachine.Resume()</span></code> and the <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> will be <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code> again.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code from inside a state</span>
+
+<span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Tick</span><span class="p">()</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">machine</span><span class="p">.</span><span class="n">Resume</span><span class="p">();</span><span class="w"> </span><span class="c1">// Resuming the machine.</span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Some other code</span>
+</pre></div>
+</div>
+</section>
+<section id="setting-up-the-machine">
+<h2>Setting up the machine<a class="headerlink" href="#setting-up-the-machine" title="Permalink to this headline"></a></h2>
+<p>You can simply create a single GameObject and attach the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> component into it. Same
+goes for the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a>. Take a look:</p>
+<video width="800" height="450" loop autoplay muted controls>
+   <source src="../../_static/videos/setting-state-machine-single-object.mp4" type="video/mp4">
+</video><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>But, as the actor’s GameObject tends to have multiple components attached into it, for the sake of organization, i find more
+convenient to proceed creating an GameObject for the actor and use the machine as its child. Check it out:</p>
+<video width="800" height="450" loop autoplay muted controls>
+   <source src="../../_static/videos/setting-state-machine-as-child.mp4" type="video/mp4">
+</video><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Both strategies will work transparently for you. Just choose yours.</p>
+<p>As you could observe, i’ve prepared a menu item for you to put a new state machine into your hierarchy. But if you wish to attach the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a>
+component into any GameObject, feel free to search for it using the “Add Component” inspector button.</p>
+</section>
+<section id="all-set">
+<h2>All set!<a class="headerlink" href="#all-set" title="Permalink to this headline"></a></h2>
+<p>Checkout the API documentation if you want to know more about these classes. For now, i’d say you have all the tools needed to start benefiting from
+the state machine!</p>
+<p>HURRAY!! Go do something awesome and let me know about it!</p>
+<div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="creating-states-for-an-actor.html" class="btn btn-neutral float-left" title="Creating States for an Actor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="parent-states.html" class="btn btn-neutral float-right" title="Parent States" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IndieGabo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

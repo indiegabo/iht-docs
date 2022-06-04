@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSM &mdash; IndieGabo&#39;s Handy Tools b0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/styles/indiegabo.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/dark_mode_js/default_dark.js"></script>
+        <script src="../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Setting up an Actor" href="how-to-use/setting-up-an-actor.html" />
+    <link rel="prev" title="Installation" href="../first-steps/installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> IndieGabo's Handy Tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../first-steps/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Available Features</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FSM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-finite-state-machine">What is a Finite State Machine?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-this-fsm">Why this FSM?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Setting up an Actor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use/creating-states-for-an-actor.html">Creating States for an Actor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use/using-the-state-machine.html">Using the state machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use/parent-states.html">Parent States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#api">API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/actor.html">Actor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/state.html">State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/state-machine.html">State Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/state-transition.html">State Transition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../character-controller-2d/welcome.html">CharacterController2D</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IndieGabo's Handy Tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>FSM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/fsm/welcome.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fsm">
+<span id="welcome-fsm-page"></span><h1>FSM<a class="headerlink" href="#fsm" title="Permalink to this headline"></a></h1>
+<p>Much welcome to the IndieGabo’s FSM!</p>
+<p>This is a code driven FSM (Finate State Machine) solution for your Unity project.</p>
+<section id="what-is-a-finite-state-machine">
+<h2>What is a Finite State Machine?<a class="headerlink" href="#what-is-a-finite-state-machine" title="Permalink to this headline"></a></h2>
+<p>A Finate State Machine is a design pattern focused on dealing with entities that have multiple possible states.</p>
+</section>
+<section id="why-this-fsm">
+<h2>Why this FSM?<a class="headerlink" href="#why-this-fsm" title="Permalink to this headline"></a></h2>
+<p>Although we know Unity’s Animator is a StateMachine it can get messy to use it as a functionality handler. This FSM
+helps you to organizing your code by holding the actors actions logic inside its respective state (we will talk about actors in a bit).</p>
+<p>Key pratical benefits of using this FSM:</p>
+<ul class="simple">
+<li><p>Helps you keep things organized</p></li>
+<li><p>Once you understand how it works it’ll save you hours of debugging since you will know exactly where each functionality is being executed</p></li>
+<li><p>Avoids overload of unecessary if statements since each state will only check for the conditions based on their registered transitions</p></li>
+<li><p>You can get it running in like 5 minutes</p></li>
+</ul>
+</section>
+<section id="how-it-works">
+<h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline"></a></h2>
+<p>Take the concept of an <code class="docutils literal notranslate"><span class="pre">actor</span></code> being anything on your game wich performs several actions. The <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">machine</span></code> then is setup
+to rule a given <code class="docutils literal notranslate"><span class="pre">actor</span></code> states of actions. The <code class="docutils literal notranslate"><span class="pre">actor</span></code> states must be registered into the <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">machine</span></code> being that a
+<code class="docutils literal notranslate"><span class="pre">state</span></code> knows when to transition into another <code class="docutils literal notranslate"><span class="pre">state</span></code> under specific conditions.</p>
+<p>Also, for the usage of this FSM, we consider that a <code class="docutils literal notranslate"><span class="pre">state</span></code> isn’t just some kind of status or definition. Our states
+<strong>actually handles</strong> what its <code class="docutils literal notranslate"><span class="pre">actor</span></code> performs while on a given <code class="docutils literal notranslate"><span class="pre">state</span></code> of actions.</p>
+</section>
+<section id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Setting up an Actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-use/creating-states-for-an-actor.html">Creating States for an Actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-use/using-the-state-machine.html">Using the state machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-use/parent-states.html">Parent States</a></li>
+</ul>
+</div>
+</section>
+<section id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/actor.html">Actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/state.html">State</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/state-machine.html">State Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/state-transition.html">State Transition</a></li>
+</ul>
+</div>
+<div style="clear: both;" ></div><a class="reference internal image-reference" href="../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../_images/gabinho.png" style="width: 80px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../first-steps/installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how-to-use/setting-up-an-actor.html" class="btn btn-neutral float-right" title="Setting up an Actor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IndieGabo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setting up an Actor &mdash; IndieGabo&#39;s Handy Tools b0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/styles/indiegabo.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/dark_mode_js/default_dark.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Creating States for an Actor" href="creating-states-for-an-actor.html" />
+    <link rel="prev" title="FSM" href="../welcome.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> IndieGabo's Handy Tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">First Steps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../first-steps/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Available Features</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../welcome.html">FSM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#what-is-a-finite-state-machine">What is a Finite State Machine?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#why-this-fsm">Why this FSM?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../welcome.html#how-to-use">How to use</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Setting up an Actor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-an-actor">What is an Actor?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-it-works">How it Works</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monobehaviour-tickers">MonoBehaviour Tickers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-code">The Code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="creating-states-for-an-actor.html">Creating States for an Actor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="using-the-state-machine.html">Using the state machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parent-states.html">Parent States</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#api">API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../character-controller-2d/welcome.html">CharacterController2D</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">IndieGabo's Handy Tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../welcome.html">FSM</a> &raquo;</li>
+      <li>Setting up an Actor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/fsm/how-to-use/setting-up-an-actor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="setting-up-an-actor">
+<span id="setting-up-an-actor-class"></span><h1>Setting up an Actor<a class="headerlink" href="#setting-up-an-actor" title="Permalink to this headline"></a></h1>
+<section id="what-is-an-actor">
+<h2>What is an Actor?<a class="headerlink" href="#what-is-an-actor" title="Permalink to this headline"></a></h2>
+<p>Anything that performs several actions and therefore will benefit from an <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> handling its states of action, fits the concept of an actor for us.</p>
+<p>That being said, the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> class exists to be the gateway between the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> and any
+other components wich handle anything for the Actor. Even the actor’s own stuff.</p>
+<p>e.g. you can have a component that handles the movement of the actor, and another that handles the animation of the actor. Both of them will
+have references within the actor’s script, and therefore any of the actor’s states can access them.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// State class stuff</span>
+
+<span class="k">protected</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">FixedTick</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">actor</span><span class="p">.</span><span class="n">movement</span><span class="p">.</span><span class="n">Move</span><span class="p">();</span><span class="w"> </span><span class="c1">// accessing a component inside a state</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">//  More State class stuff</span>
+</pre></div>
+</div>
+<p>You can have as many actors representations as you wish in your game. Being the class <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> an abstraction, just implement
+classes wich inherit from the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> class.</p>
+</section>
+<section id="how-it-works">
+<h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline"></a></h2>
+<p>At its <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Awake()</span></code> the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> will try finding a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> component among either its own GameObject
+or its children GameObjects.</p>
+<p>From there on the Machine will auto regulate the actor’s states evaluating if it needs transitioning into another state on each of the actor’s
+<code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Update()</span></code> <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.FixedUpdate()</span></code> and <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.LateUpdate()</span></code> methods execution.</p>
+</section>
+<section id="monobehaviour-tickers">
+<h2>MonoBehaviour Tickers<a class="headerlink" href="#monobehaviour-tickers" title="Permalink to this headline"></a></h2>
+<p>At each of the Actor’s MonoBehaviour “frame handlers” it will call the Machine’s corresponding ticker. The machine
+will then call its current state corresponding Ticker method.</p>
+<p>This means that all states will be synced with the actor’s MonoBehaviour methods. Therefore we can say all action’s
+execution are isolated inside the state respecting the actor’s pacing.</p>
+</section>
+<section id="the-code">
+<h2>The Code<a class="headerlink" href="#the-code" title="Permalink to this headline"></a></h2>
+<p>Below is a good start for creating an <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> script of your own. Feel free to copy:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Be aware that you need calling the base class methods in case of overrides of the core <code class="docutils literal notranslate"><span class="pre">MonoBehaviour</span></code>
+methods (wich will probably be needed).</p>
+</div>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">IndieGabo.FSM</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyActor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Actor</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="cp">#region MonoBehaviour Methods</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Be aware that you need calling the base class methods in case of overrides</span>
+<span class="w">    </span><span class="c1">// (wich will probably be needed). Here are the important ones already coded:</span>
+
+<span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Awake</span><span class="p">()</span><span class="w"> </span><span class="c1">// Attention to override</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">Awake</span><span class="p">();</span><span class="w"> </span><span class="c1">// Case you did override this MUST be here.</span>
+<span class="w">        </span><span class="c1">// Code from here on...</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span><span class="w"> </span><span class="c1">// Attention to override</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span><span class="w"> </span><span class="c1">// Case you did override this MUST be here.</span>
+<span class="w">        </span><span class="c1">// Code from here on...</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">LateUpdate</span><span class="p">()</span><span class="w"> </span><span class="c1">// Attention to override</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">LateUpdate</span><span class="p">();</span><span class="w"> </span><span class="c1">// Case you did override this MUST be here.</span>
+<span class="w">        </span><span class="c1">// Code from here on...</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">FixedUpdate</span><span class="p">()</span><span class="w"> </span><span class="c1">// Attention to override</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">base</span><span class="p">.</span><span class="n">FixedUpdate</span><span class="p">();</span><span class="w"> </span><span class="c1">// Case you did override this MUST be here.</span>
+<span class="w">        </span><span class="c1">// Code from here on...</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="cp">#endregion</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>You can also right click on a folder of your Unity Editor’s project window and follow the path <em>Create</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>IndieGabo</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>FSM</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>New Actor</em>.
+Selecting this will create a new <code class="docutils literal notranslate"><span class="pre">Actor</span></code> script under the right clicked folder for you (Make sure you have the package installed).</p>
+<a class="reference internal image-reference" href="../../_images/actor-script-from-menu.gif"><img alt="Creating actor script from menu" src="../../_images/actor-script-from-menu.gif" style="width: 600px;" /></a>
+<p>Hurray! You’ve just created your first Actor! Congratulations! Time to understand how to create states for your Actor by <a class="reference internal" href="creating-states-for-an-actor.html#creating-states-for-an-actor-page"><span class="std std-ref">clicking here</span></a>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../welcome.html" class="btn btn-neutral float-left" title="FSM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="creating-states-for-an-actor.html" class="btn btn-neutral float-right" title="Creating States for an Actor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IndieGabo.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
