@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IndieGabo
+# This file is distributed under the same license as the IndieGabo's Handy Tools package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IndieGabo's Handy Tools \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-04 18:57-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:4
+msgid "Setting up an Actor"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:7
+msgid "What is an Actor?"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:9
+msgid "Anything that performs several actions and therefore will benefit from an :ref:`StateMachine <state-machine-class>` handling its states of action, fits the concept of an actor for us."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:11
+msgid "That being said, the :ref:`Actor <actor-class>` class exists to be the gateway between the :ref:`StateMachine <state-machine-class>` and any other components wich handle anything for the Actor. Even the actor's own stuff."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:14
+msgid "e.g. you can have a component that handles the movement of the actor, and another that handles the animation of the actor. Both of them will have references within the actor's script, and therefore any of the actor's states can access them."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:28
+msgid "You can have as many actors representations as you wish in your game. Being the class :ref:`Actor <actor-class>` an abstraction, just implement classes wich inherit from the :ref:`Actor <actor-class>` class."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:32
+msgid "How it Works"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:34
+msgid "At its ``MonoBehaviour.Awake()`` the :ref:`Actor <actor-class>` will try finding a :ref:`StateMachine <state-machine-class>` component among either its own GameObject or its children GameObjects."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:37
+msgid "From there on the Machine will auto regulate the actor's states evaluating if it needs transitioning into another state on each of the actor's ``MonoBehaviour.Update()`` ``MonoBehaviour.FixedUpdate()`` and ``MonoBehaviour.LateUpdate()`` methods execution."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:42
+msgid "MonoBehaviour Tickers"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:44
+msgid "At each of the Actor's MonoBehaviour \"frame handlers\" it will call the Machine's corresponding ticker. The machine will then call its current state corresponding Ticker method."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:47
+msgid "This means that all states will be synced with the actor's MonoBehaviour methods. Therefore we can say all action's execution are isolated inside the state respecting the actor's pacing."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:51
+msgid "The Code"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:53
+msgid "Below is a good start for creating an :ref:`Actor <actor-class>` script of your own. Feel free to copy:"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:57
+msgid "Be aware that you need calling the base class methods in case of overrides of the core ``MonoBehaviour`` methods (wich will probably be needed)."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:102
+msgid "You can also right click on a folder of your Unity Editor's project window and follow the path *Create* ``->`` *IndieGabo* ``->`` *FSM* ``->`` *New Actor*. Selecting this will create a new ``Actor`` script under the right clicked folder for you (Make sure you have the package installed)."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:-1
+msgid "Creating actor script from menu"
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:109
+msgid "Hurray! You've just created your first Actor! Congratulations! Time to understand how to create states for your Actor by :ref:`clicking here <creating-states-for-an-actor-page>`."
+msgstr ""
+
+#: ../../source/fsm/how-to-use/setting-up-an-actor.rst:-1
+msgid "Gabinho Waving"
+msgstr ""
