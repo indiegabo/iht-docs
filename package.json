@@ -1,6 +1,6 @@
 {
     "name": "com.indiegabo.handy-tools",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "A handy set of tools for your Unity project",
     "displayName": "IndieGabo's Handy Tools",
     "unity": "2019.4",
@@ -9,6 +9,7 @@
     "keywords": [
         "FSM",
         "Character Controller",
-        "2D"
+        "2D",
+        "Scritps"
     ]
 }
