@@ -1,0 +1,4 @@
+.. _welcome-character-controller-2d-page:
+
+CharacterController2D
+=====================
