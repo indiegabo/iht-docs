@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IndieGabo
+# This file is distributed under the same license as the IndieGabo's Handy
+# Tools package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IndieGabo's Handy Tools \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-04 14:28-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.1\n"
+
+#: ../../source/fsm/api/actor.rst:4
+msgid "Actor"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:7
+msgid "Namespace"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:14
+msgid "Declaration"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:22
+msgid "Fields"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:29
+msgid "``protected StateMachine``"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:29
+msgid "``stateMachine``"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:29
+msgid ""
+"An internal reference for the actor's :ref:`StateMachine <state-machine-"
+"class>`"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:33
+msgid "Properties"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:40
+msgid "``public StateMachine { get; }``"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:40
+msgid "``Machine``"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:40
+msgid "A public access for the actor's :ref:`StateMachine <state-machine-class>`"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:44
+msgid "Methods"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:51
+msgid "``protected virtual void``"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:51
+msgid "``SetMachine()``"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:51
+msgid ""
+"Must be called internally at ``MonoBehaviour.Awake()`` in order to setup "
+"the :ref:`StateMachine <state-machine-class>`"
+msgstr ""
+
+#: ../../source/fsm/api/actor.rst:-1
+msgid "Gabinho Waving"
+msgstr ""
+

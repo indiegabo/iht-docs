@@ -1,0 +1,1 @@
+sphinx-build -b html ./source ./build/html/pt_BR -D language=pt_BR  
