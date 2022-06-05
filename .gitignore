@@ -4,4 +4,4 @@
 #
 
 # Build folders of sphinx documentation
-/Docs/**/[Bb]uilding/*
+**/[Bb]uilding/*
