@@ -24,17 +24,19 @@ msgstr "Criando Estados para um Ator"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:7
 msgid "What is a state?"
-msgstr ""
+msgstr "O que é um estado?"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:9
 msgid ""
 "A state represents a specific group of actions that should be performed "
 "while an actor's specific condition is met."
 msgstr ""
+"Um estado representa um grupo de ações que devem ser executadas enquanto "
+"uma condição específica do ator é atendida."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:12
 msgid "The usage strategy"
-msgstr ""
+msgstr "A estratégia de uso"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:14
 msgid ""
@@ -43,6 +45,10 @@ msgid ""
 "machine-class>`. The machine will then automatically recognize it and use"
 " it as it should."
 msgstr ""
+"Após ser corretamente criado, um script de :ref:`Estado <state-class>`"
+" deve ser anexado ao mesmo GameObject da :ref:`StateMachine <state-"
+"machine-class>`. A máquina automaticamente irá reconhecer o estado usa-lo"
+"devidamente."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:17
 msgid ""
@@ -51,22 +57,29 @@ msgid ""
 "specific actor. Being that way, it does not make any sense to a state to "
 "exist without knowing its reason for being."
 msgstr ""
+"Além disso, a classe :ref:`State <state-class>` é abstrata, assim como a classe :ref:`Actor <actor-class>`. Porque um "
+"estado é específico para um ator específico. Sendo assim, não faz sentido"
+"que um estado exista sem que se saiba porquê ele está sendo criado."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:29
 msgid "The code"
-msgstr ""
+msgstr "O Código"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:31
 msgid ""
 "Below is the base code for a successful state. Take a look at it and feel"
 " free to copy and use it as you wish."
 msgstr ""
+"Abaixo está o código base para um estado bem sucedido. Dê uma olhada nele e "
+"sinta-se livre para copiar e usar como quiser."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:79
 msgid ""
 "And, of course, there is a Script Template ready for you at *Create* "
 "``->`` *IndieGabo* ``->`` *FSM* ``->`` *New State*."
 msgstr ""
+"E, claro, há um Modelo de Script pronto para você em *Create* ``->`` *IndieGabo* "
+"``->`` *FSM* ``->`` *New State*."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:89
 msgid ""
@@ -74,6 +87,9 @@ msgid ""
 "those methods. All these methods are optional and you only need to "
 "implement the ones you will use inside your state."
 msgstr ""
+"Ok. Agora que vimos o código, vamos dar uma olhada em cada um de seus métodos. Todos eles "
+"são opcionais e você só precisa implementar os que você vai usar "
+"dentro do seu estado."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:93
 msgid "OnLoad()"
@@ -86,6 +102,11 @@ msgid ""
 "states. So it is inside the ``State.OnLoad()`` that you should put any "
 "logic regardind initialization **before** the machine starts running."
 msgstr ""
+"Este método representa o momento em que a :ref:`StateMachine <state-machine-"
+"class>` carrega este script de :ref:`State <state-class>` como um de seus estados. "
+"Então, é no ``State.OnLoad()`` que você deve colocar qualquer "
+"lógica que seja necessária para inicialização **antes** que a máquina "
+"comece a rodar."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:112
 msgid ""
@@ -93,12 +114,17 @@ msgid ""
 " will cover on the :ref:`Transitioning Between States <transitioning-"
 "between-states>` section."
 msgstr ""
+"O ``State.OnLoad()`` é o melhor lugar para registrar transições. Vamos dar uma olhada melhor em transições "
+"na seção :ref:`Transitando entre estados <transitioning-"
+"between-states>`."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:115
 msgid ""
 "This method is called only once in the :ref:`StateMachine <state-machine-"
 "class>` life cycle."
 msgstr ""
+"Este método é chamado apenas uma vez no ciclo de vida da :ref:`StateMachine <state-machine-"
+"class>`."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:118
 msgid "OnEnter()"
@@ -110,12 +136,16 @@ msgid ""
 "machine-class>` sets this :ref:`State <state-class>` script as its "
 "current state."
 msgstr ""
+"Este método é chamado o **momento exato** que a :ref:`StateMachine <state-"
+"machine-class>` define este script de :ref:`State <state-class>` como seu estado atual."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:133
 msgid ""
 "The ``State.OnEnter()`` is perfect for start playing animations, "
 "initializing variables, properties and etc."
 msgstr ""
+"O ``State.OnEnter()`` é o melhor lugar para iniciar animações, "
+"inicializar variáveis, propriedades e etc."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:136
 msgid "OnExit()"
@@ -127,12 +157,17 @@ msgid ""
 "machine-class>` wich has this :ref:`State <state-class>` script as its "
 "current state, transition into another state."
 msgstr ""
+"Este método é chamado **exatamente antes** que a :ref:`StateMachine <state-"
+"machine-class>` que tem este script de :ref:`State <state-class>` como seu estado atual, transite para "
+"outro estado."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:152
 msgid ""
 "The ``State.OnExit()`` is perfect place to stop animations and reset "
 "variables, properties and etc."
 msgstr ""
+"O ``State.OnExit()`` é o melhor lugar para parar animações e resetar "
+"variáveis, propriedades e etc."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:155
 msgid "Tickers"
@@ -144,10 +179,13 @@ msgid ""
 "methods\" will be called at each time its actor \"frame handlers\" are "
 "executed."
 msgstr ""
+"Uma vez que um estado é definido como estado atual pela máquina, seus "
+"métodos \"Ticker\" serão chamados toda vez que os \"Frame "
+"Handlers\" do ator são executados."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:160
 msgid "They are:"
-msgstr ""
+msgstr "São eles:"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:162
 msgid ""
@@ -155,6 +193,9 @@ msgid ""
 "<https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>`_ "
 "method is called."
 msgstr ""
+"``Tick()``: Chamado toda vez que o método `Update() "
+"<https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>`_ "
+"do ator é chamado."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:163
 msgid ""
@@ -162,6 +203,9 @@ msgid ""
 "<https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>`_"
 " method is called."
 msgstr ""
+"``LateTick()``: Chamado toda vez que o método `LateUpdate() "
+"<https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>`_"
+" do ator é chamado."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:164
 msgid ""
@@ -169,6 +213,9 @@ msgid ""
 "<https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html>`_"
 " method is called."
 msgstr ""
+"``FixedTick()``: Chamado toda vez que o método `FixedUpdate() "
+"<https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html>`_"
+" do ator é chamado."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:197
 msgid ""
@@ -178,24 +225,30 @@ msgid ""
 "<https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>`_ as"
 " a way to organize your script execution."
 msgstr ""
+"Se você não está familiarizado com o método `LateUpdate() "
+"<https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html>`_"
+", ele é chamado uma vez por frame após o `Update() "
+"<https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html>`_ "
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:200
 msgid ""
 "Refer to the :ref:`IndieGabo's FSM Life Cycle <lifecycle>` for visual "
 "information about Tickers being called."
 msgstr ""
+"Veja o :ref:`ciclo de vida da FSM <lifecycle>` para informações "
+"visuais sobre os Tickers chamados."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:205
 msgid "Transitioning Between States"
-msgstr ""
+msgstr "Transitando entre estados"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:207
 msgid "There are two ways for a state to transition into another state:"
-msgstr ""
+msgstr "Existem duas maneiras de um estado transitar para outro estado:"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:209
 msgid "By calling the Machine's ``ChangeState()`` method."
-msgstr ""
+msgstr "Chamando o método ``ChangeState()`` da Máquina."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:213
 msgid ""
@@ -204,12 +257,19 @@ msgid ""
 "machine's methods from within a state is as easy as using its "
 "``State.machine`` property as we can see below."
 msgstr ""
+"Como visto na :ref:`Documentação do Estado <state-class>`, todos os "
+"estados guardam referência à Máquina que eles pertencem. Portanto, "
+"acessar os métodos e propriedades da Máquina de dentro de um estado é fácil como "
+"acessar a propriedade ``State.machine``."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:233
 msgid ""
 "By registering a :ref:`StateTransition <state-transition-class>` inside "
 "its ``State.OnLoad()`` using the ``State.AddTransition()`` method."
 msgstr ""
+"Registrando uma :ref:`StateTransition <state-transition-class>` "
+"dentro de seu ``State.OnLoad()`` usando o método "
+"``State.AddTransition()``."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:235
 msgid ""
@@ -218,6 +278,10 @@ msgid ""
 "considering given priorities. If so, it will automatically transition "
 "into the target state."
 msgstr ""
+"Usando esta abordagem (que é altamente recomendada) a máquina, em cada "
+" \"Frame Handler\" do ator, avaliará se alguma condição de suas ```transitions`` "
+"é cumprida, considerando suas prioridades. Caso alguma seja avaliada como verdade, ele irá automaticamente "
+"transitar para o estado alvo da ``StateTransition``."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:238
 msgid ""
@@ -227,12 +291,18 @@ msgid ""
 "``State.AddTransition()`` method and pass the those 3 arguments. I take "
 "care of the rest for you. Here is how you use it:"
 msgstr ""
+"A :ref:`StateTransition <state-transition-class>` consiste em uma ``Condition``, um ``State`` alvo "
+"e uma ``prioridade``. Mas não é necessário que você instancie ela. "
+"Só chame o método ``State.AddTransition()`` e passe os 3 argumentos. "
+"Eu cuido do resto por você. Aqui está como você usa:"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:250
 msgid ""
 "But, if you somehow prefer, here is how a StateTransition is instantiated"
 " and registered:"
 msgstr ""
+"Mas, se você quiser, aqui está como uma StateTransition é instanciada "
+"e registrada:"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:261
 msgid ""
@@ -246,6 +316,16 @@ msgid ""
 "want to register a :ref:`StateTransition <state-transition-class>` in a "
 "state."
 msgstr ""
+"Note que para declarar uma ``Condition`` você **DEVE** proceder "
+"usando um `Func<TResult> Delegar <https://docs.microsoft.com/pt-"
+"br/dotnet/api/system.func-1?view=net-6.0>`_. Não se preocupe se você "
+"não está familiarizado com isso ainda. Tudo que você precisa saber é "
+"que a máquina irá chamar essa ``Condition()`` como um método (função) e seu contexto "
+"será avaliado como verdadeiro ou falso somente quando a máquina assim o fizer. "
+"No caso disso ser novidade para você, por enquanto, "
+"apenas siga a sintaxe no código abaixo cada vez que você quiser registrar "
+"uma :ref:`StateTransition <state-transition-class>` em um estado."
+
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:267
 msgid ""
@@ -253,6 +333,9 @@ msgid ""
 "the same GameObject, you can just use the ``GetComponent<State>()`` "
 "method."
 msgstr ""
+"Para declarar o estado alvo, já que todos os estados são componentes "
+"anexados ao mesmo GameObject, você pode simplesmente usar o método "
+"``GetComponent<State>()``."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:269
 msgid ""
@@ -261,6 +344,10 @@ msgid ""
 "be evaluated. otherwise it will be read as the declaration order. The "
 "default priority value is ``0``."
 msgstr ""
+"Por último, a prioridade da máquina é lida de maneira **descendente**. "
+"O que significa que a maior prioridade que você dá como terceiro argumento, "
+"fará com que a ``Condition()`` da ``StateTransition`` seja avaliada antes. Fora isso, ela será lida como a ordem de "
+"declaração. O valor padrão da prioridade é ``0``."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:293
 msgid ""
@@ -268,10 +355,14 @@ msgid ""
 "Meaning that any ``GetComponent<State>()`` (or, well... anything else) "
 "used inside of it will not be called multiple times."
 msgstr ""
+"O ``State.OnLoad()`` é chamado apenas uma vez no ciclo de vida da "
+"Máquina. Significando que qualquer ``GetComponent<State>()`` (ou "
+"bem... qualquer lógica) dentro dele não será chamado múltiplas "
+"vezes."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:297
 msgid "The inspector"
-msgstr ""
+msgstr "O Inspetor"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:299
 msgid ""
@@ -279,22 +370,25 @@ msgid ""
 " state using Unity's inspector so you get some better visual feedback "
 "when taking a look at the state machine."
 msgstr ""
+"Para um estado simples, um nome simples. E é isso. Você pode definir um "
+"Nome para o seu estado usando o Inspetor do Unity, então você terá "
+"feedback visual quando inspecionar a máquina de estados."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:302
 msgid "Set a name:"
-msgstr ""
+msgstr "Defina um nome:"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:-1
 msgid "State Name on inspector"
-msgstr ""
+msgstr "O nome do estado no inspetor"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:307
 msgid "And see it in action while inpecting the StateMachine:"
-msgstr ""
+msgstr "A máquina de estados em ação exibindo o nome do estado atual:"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:-1
 msgid "State Name appearing on machine"
-msgstr ""
+msgstr "O nome do estado aparecendo no inspetor da máquina"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:312
 msgid ""
@@ -302,8 +396,10 @@ msgid ""
 " :ref:`how to use <using-the-state-machine-class>` our precious state "
 "machine."
 msgstr ""
+"Isso é tudo sobre criar um estado por enquanto. Me deixa mostrar um pouco mais "
+"sobre :ref:`como usar <using-the-state-machine-class>` nossa máquina de estados maravilhosa."
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabiniho Acenando"
 

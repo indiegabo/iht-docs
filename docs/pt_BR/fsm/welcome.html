@@ -29,7 +29,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="next" title="Setting up an Actor" href="how-to-use/setting-up-an-actor.html" />
+    <link rel="next" title="Configurando um ator" href="how-to-use/setting-up-an-actor.html" />
     <link rel="prev" title="Installation" href="../first-steps/installation.html" /> 
 </head>
 
@@ -57,12 +57,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FSM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-a-finite-state-machine">O que é uma Máquina de Estados Finita?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-this-fsm">Porquê esta FSM?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-it-works">How it Works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to use</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Setting up an Actor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-works">Como funciona</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use">Como usar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Configurando um ator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how-to-use/creating-states-for-an-actor.html">Criando Estados para um Ator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how-to-use/using-the-state-machine.html">Usando a Máquina de estados</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how-to-use/parent-states.html">Parent States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how-to-use/parent-states.html">Estados Base</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#api">API</a><ul>
@@ -112,30 +112,27 @@
 <section id="why-this-fsm">
 <h2>Porquê esta FSM?<a class="headerlink" href="#why-this-fsm" title="Link permanente para este cabeçalho"></a></h2>
 <p>Embora saibamos que o Animator da Unity é uma Máquina de Estados, ele pode ficar confuso para se usar como um gerenciador de ações de um modo geral. Esta FSM lhe ajuda a organizar seu código mantendo a lógica das ações dos atores dentro do seu respectivo estado (vamos falar sobre atores em alguns instantes).</p>
-<p>Key pratical benefits of using this FSM:</p>
+<p>Benefícios práticos da utilização desta FSM:</p>
 <ul class="simple">
-<li><p>Helps you keep things organized</p></li>
-<li><p>Once you understand how it works it’ll save you hours of debugging since you will know exactly where each functionality is being executed</p></li>
-<li><p>Avoids overload of unecessary if statements since each state will only check for the conditions based on their registered transitions</p></li>
-<li><p>You can get it running in like 5 minutes</p></li>
+<li><p>Te ajuda a manter tudo organizado</p></li>
+<li><p>Uma vez que você entenda como funciona, você vai economizar horas de depuração, pois você vai saber exatamente onde cada ação está sendo executada</p></li>
+<li><p>Evita sobrecarga de if statements, pois cada estado só verificará as condições baseadas nas transições registradas</p></li>
+<li><p>5 minutos pra entender como funciona e colocar pra rodar</p></li>
 </ul>
 </section>
 <section id="how-it-works">
-<h2>How it Works<a class="headerlink" href="#how-it-works" title="Link permanente para este cabeçalho"></a></h2>
-<p>Take the concept of an <code class="docutils literal notranslate"><span class="pre">actor</span></code> being anything on your game wich performs several actions. The <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">machine</span></code> then is setup
-to rule a given <code class="docutils literal notranslate"><span class="pre">actor</span></code> states of actions. The <code class="docutils literal notranslate"><span class="pre">actor</span></code> states must be registered into the <code class="docutils literal notranslate"><span class="pre">state</span> <span class="pre">machine</span></code> being that a
-<code class="docutils literal notranslate"><span class="pre">state</span></code> knows when to transition into another <code class="docutils literal notranslate"><span class="pre">state</span></code> under specific conditions.</p>
-<p>Also, for the usage of this FSM, we consider that a <code class="docutils literal notranslate"><span class="pre">state</span></code> isn’t just some kind of status or definition. Our states
-<strong>actually handles</strong> what its <code class="docutils literal notranslate"><span class="pre">actor</span></code> performs while on a given <code class="docutils literal notranslate"><span class="pre">state</span></code> of actions.</p>
+<h2>Como funciona<a class="headerlink" href="#how-it-works" title="Link permanente para este cabeçalho"></a></h2>
+<p>Conside um <code class="docutils literal notranslate"><span class="pre">ator</span></code> qualquer coisa no seu jogo que realiza várias ações. A <code class="docutils literal notranslate"><span class="pre">máquina</span> <span class="pre">de</span> <span class="pre">estados</span></code> então é configurada para regular os estados de ações de um <code class="docutils literal notranslate"><span class="pre">ator</span></code>. Os estados do <code class="docutils literal notranslate"><span class="pre">ator</span></code> devem ser registrados na <code class="docutils literal notranslate"><span class="pre">máquina</span> <span class="pre">de</span> <span class="pre">estados</span></code>, sendo que um <code class="docutils literal notranslate"><span class="pre">estado</span></code> sabe exatamente quando e para qual outro <code class="docutils literal notranslate"><span class="pre">estado</span></code> transitar sob condições específicas.</p>
+<p>Além disso, para o uso desta FSM, consideramos que um <code class="docutils literal notranslate"><span class="pre">estado</span></code> não só é um tipo de status ou definição. Os estados <strong>realmente executam</strong> o que o <code class="docutils literal notranslate"><span class="pre">ator</span></code> deve fazer enquanto em um determinado <code class="docutils literal notranslate"><span class="pre">estado</span></code> de ações.</p>
 </section>
 <section id="how-to-use">
-<h2>How to use<a class="headerlink" href="#how-to-use" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Como usar<a class="headerlink" href="#how-to-use" title="Link permanente para este cabeçalho"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Setting up an Actor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Configurando um ator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to-use/creating-states-for-an-actor.html">Criando Estados para um Ator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to-use/using-the-state-machine.html">Usando a Máquina de estados</a></li>
-<li class="toctree-l1"><a class="reference internal" href="how-to-use/parent-states.html">Parent States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-use/parent-states.html">Estados Base</a></li>
 </ul>
 </div>
 </section>
@@ -149,7 +146,7 @@ to rule a given <code class="docutils literal notranslate"><span class="pre">act
 <li class="toctree-l1"><a class="reference internal" href="api/state-transition.html">State Transition</a></li>
 </ul>
 </div>
-<div style="clear: both;" ></div><a class="reference internal image-reference" href="../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../_images/gabinho.png" style="width: 80px;" /></a>
+<div style="clear: both;" ></div><a class="reference internal image-reference" href="../_images/gabinho.png"><img alt="Gabinho Acenando" class="align-right" src="../_images/gabinho.png" style="width: 80px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -161,7 +158,7 @@ to rule a given <code class="docutils literal notranslate"><span class="pre">act
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
         <a href="../first-steps/installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="how-to-use/setting-up-an-actor.html" class="btn btn-neutral float-right" title="Setting up an Actor" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="how-to-use/setting-up-an-actor.html" class="btn btn-neutral float-right" title="Configurando um ator" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

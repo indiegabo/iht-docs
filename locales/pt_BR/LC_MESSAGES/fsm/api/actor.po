@@ -28,11 +28,11 @@ msgstr ""
 
 #: ../../source/fsm/api/actor.rst:14
 msgid "Declaration"
-msgstr ""
+msgstr "Declaração"
 
 #: ../../source/fsm/api/actor.rst:22
 msgid "Fields"
-msgstr ""
+msgstr "Campos (Fields)"
 
 #: ../../source/fsm/api/actor.rst:29
 msgid "``protected StateMachine``"
@@ -47,10 +47,12 @@ msgid ""
 "An internal reference for the actor's :ref:`StateMachine <state-machine-"
 "class>`"
 msgstr ""
+"Uma referência interna para o :ref:`StateMachine <state-machine-"
+"class>` do ator"
 
 #: ../../source/fsm/api/actor.rst:33
 msgid "Properties"
-msgstr ""
+msgstr "Propriedades (Properties)"
 
 #: ../../source/fsm/api/actor.rst:40
 msgid "``public StateMachine { get; }``"
@@ -62,11 +64,11 @@ msgstr ""
 
 #: ../../source/fsm/api/actor.rst:40
 msgid "A public access for the actor's :ref:`StateMachine <state-machine-class>`"
-msgstr ""
+msgstr "Um acesso público para o :ref:`StateMachine <state-machine-class>` do ator"
 
 #: ../../source/fsm/api/actor.rst:44
 msgid "Methods"
-msgstr ""
+msgstr "Métodos"
 
 #: ../../source/fsm/api/actor.rst:51
 msgid "``protected virtual void``"
@@ -81,8 +83,10 @@ msgid ""
 "Must be called internally at ``MonoBehaviour.Awake()`` in order to setup "
 "the :ref:`StateMachine <state-machine-class>`"
 msgstr ""
+"Deve ser chamado internamente no ``MonoBehaviour.Awake()`` para configurar "
+"o :ref:`StateMachine <state-machine-class>`"
 
 #: ../../source/fsm/api/actor.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabinho Acenando"
 

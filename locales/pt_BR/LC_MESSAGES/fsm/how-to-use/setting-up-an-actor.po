@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:4
 msgid "Setting up an Actor"
-msgstr ""
+msgstr "Configurando um ator"
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:7
 msgid "What is an Actor?"
-msgstr ""
+msgstr "O que é um ator?"
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:9
 msgid ""
@@ -32,6 +32,9 @@ msgid ""
 " :ref:`StateMachine <state-machine-class>` handling its states of action,"
 " fits the concept of an actor for us."
 msgstr ""
+"Qualquer coisa que executa várias ações e portanto se beneficia de um"
+" :ref:`StateMachine <state-machine-class>` lidando com os seus estados de"
+" ação, atende ao conceito de ator para nós."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:11
 msgid ""
@@ -40,6 +43,9 @@ msgid ""
 "other components wich handle anything for the Actor. Even the actor's own"
 " stuff."
 msgstr ""
+"Sendo assim, a classe :ref:`Actor <actor-class>` existe para ser a "
+"conexão entre a :ref:`StateMachine <state-machine-class>` e qualquer "
+"outro componente que manipule algo para o ator. Incluindo as coisas do próprio ator."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:14
 msgid ""
@@ -48,6 +54,7 @@ msgid ""
 "references within the actor's script, and therefore any of the actor's "
 "states can access them."
 msgstr ""
+"ex. você pode ter um componente que lida com o movimento do ator, e outro que manipula a animação do ator. Ambos devem ter referências dentro do script do ator, e, portanto, qualquer um dos estados do ator pode acessá-los."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:28
 msgid ""
@@ -55,10 +62,12 @@ msgid ""
 "Being the class :ref:`Actor <actor-class>` an abstraction, just implement"
 " classes wich inherit from the :ref:`Actor <actor-class>` class."
 msgstr ""
+"Você pode ter quantas representações de atores quiser no seu joguinho. "
+"Sendo a classe :ref:`Actor <actor-class>` uma abstração, apenas implemente classes que herdam da classe :ref:`Actor <actor-class>`."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:32
 msgid "How it Works"
-msgstr ""
+msgstr "Como funciona"
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:34
 msgid ""
@@ -66,6 +75,8 @@ msgid ""
 "finding a :ref:`StateMachine <state-machine-class>` component among "
 "either its own GameObject or its children GameObjects."
 msgstr ""
+"No ``MonoBehaviour.Awake()`` do :ref:`Actor <actor-class>`, ele tentará encontrar um componente :ref:`StateMachine <state-machine-class>` "
+"componente em seu próprio GameObject ou nos GameObjects filhos do seu GameObject."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:37
 msgid ""
@@ -74,10 +85,14 @@ msgid ""
 "actor's ``MonoBehaviour.Update()`` ``MonoBehaviour.FixedUpdate()`` and "
 "``MonoBehaviour.LateUpdate()`` methods execution."
 msgstr ""
+"A partir daí a máquina irá regular os estados do ator "
+"avaliando se ele precisa transitar para outro estado em cada execução dos métodos "
+"``MonoBehaviour.Update()``, ``MonoBehaviour.FixedUpdate()`` e "
+"``MonoBehaviour.LateUpdate()`` do ator."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:42
 msgid "MonoBehaviour Tickers"
-msgstr ""
+msgstr "Tickers do MonoBehaviour"
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:44
 msgid ""
@@ -85,6 +100,8 @@ msgid ""
 "Machine's corresponding ticker. The machine will then call its current "
 "state corresponding Ticker method."
 msgstr ""
+"Em cada execução dos \"Frame Handlers\" do MonoBehaviour do Ator, ele chamará o ticker "
+"correspondente da máquina. A máquina por sua vez chamará o método ticker do estado atual."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:47
 msgid ""
@@ -92,16 +109,21 @@ msgid ""
 "methods. Therefore we can say all action's execution are isolated inside "
 "the state respecting the actor's pacing."
 msgstr ""
+"Isso significa que todos os estados serão sincronizados com os métodos ``MonoBehaviour.Update()``, ``MonoBehaviour.FixedUpdate()`` e ``MonoBehaviour.LateUpdate()`` "
+"MonoBehaviour do ator. Portanto, podemos dizer que todas as ações "
+"executadas estão isoladas dentro do estado respeitando o ritmo do ator."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:51
 msgid "The Code"
-msgstr ""
+msgstr "O Código"
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:53
 msgid ""
 "Below is a good start for creating an :ref:`Actor <actor-class>` script "
 "of your own. Feel free to copy:"
 msgstr ""
+"Abaixo está um bom início para criar seu próprio script de :ref:`Ator <actor-class>`. "
+"Fique a vontade para copiar."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:57
 msgid ""
@@ -109,6 +131,8 @@ msgid ""
 "overrides of the core ``MonoBehaviour`` methods (wich will probably be "
 "needed)."
 msgstr ""
+"Tenha em mente que você precisa chamar os métodos da classe base em caso de "
+"sobrescrita dos métodos ``MonoBehaviour`` (que provavelmente serão necessárias)."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:102
 msgid ""
@@ -118,10 +142,15 @@ msgid ""
 "under the right clicked folder for you (Make sure you have the package "
 "installed)."
 msgstr ""
+"Você também pode clicar com o botão direito no painel de projeto do "
+"Editor da Unity e seguir o caminho *Create* ``->`` *IndieGabo* ``->`` *FSM* "
+"``->`` *New Actor*. A Unity criará um novo script de "
+"``ator`` no diretório clicado (Certifique-se de que "
+"você tenha o pacote de templates de script instalado)."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:-1
 msgid "Creating actor script from menu"
-msgstr ""
+msgstr "Criando um script de ator a partir do menu"
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:109
 msgid ""
@@ -129,8 +158,11 @@ msgid ""
 "understand how to create states for your Actor by :ref:`clicking here "
 "<creating-states-for-an-actor-page>`."
 msgstr ""
+"Boa! Você acabou de criar seu primeiro ator. Parabéns! Hora de "
+"aprender como criar estados para seu Ator :ref:`clicando aqui "
+"<creating-states-for-an-actor-page>`."
 
 #: ../../source/fsm/how-to-use/setting-up-an-actor.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabinhgo Acenando"
 

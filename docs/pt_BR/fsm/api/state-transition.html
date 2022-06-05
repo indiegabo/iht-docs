@@ -55,18 +55,18 @@
 <p class="caption" role="heading"><span class="caption-text">Ferramentas Disponíveis</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../welcome.html">FSM</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#what-is-a-finite-state-machine">What is a Finite State Machine?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#why-this-fsm">Why this FSM?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-it-works">How it Works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-to-use">How to use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#what-is-a-finite-state-machine">O que é uma Máquina de Estados Finita?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#why-this-fsm">Porquê esta FSM?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-it-works">Como funciona</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-to-use">Como usar</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../welcome.html#api">API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="actor.html">Actor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="state.html">State</a></li>
 <li class="toctree-l3"><a class="reference internal" href="state-machine.html">State Machine</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">State Transition</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#namespace">Namespace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#declaration">Declaration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#declaration">Declaração</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Propriedades (Properties)</a></li>
 </ul>
 </li>
 </ul>
@@ -110,13 +110,13 @@
 </div>
 </section>
 <section id="declaration">
-<h2>Declaration<a class="headerlink" href="#declaration" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Declaração<a class="headerlink" href="#declaration" title="Link permanente para este cabeçalho"></a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">StateTransition</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Propriedades (Properties)<a class="headerlink" href="#properties" title="Link permanente para este cabeçalho"></a></h2>
 <table class="colwidths-given docutils align-default" style="width: 100%">
 <colgroup>
 <col style="width: 33%" />
@@ -126,22 +126,22 @@
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Func&lt;bool&gt;</span> <span class="pre">{get;</span> <span class="pre">protected</span> <span class="pre">set;}</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Condition</span></code></p></td>
-<td><p>A delegate function representing the transition’s condition</p></td>
+<td><p>Uma função delegada que representa a condição da transição</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">State</span> <span class="pre">{get;</span> <span class="pre">protected</span> <span class="pre">set;}</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">state</span></code></p></td>
-<td><p>The state wich should be transitioned into based on <code class="docutils literal notranslate"><span class="pre">Condition</span></code></p></td>
+<td><p>O estado alvo para o qual a máquina deve transitar br baseado na <code class="docutils literal notranslate"><span class="pre">Condition</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">int</span> <span class="pre">{get;</span> <span class="pre">protected</span> <span class="pre">set;}</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">priority</span></code></p></td>
-<td><p>The execution priority. Higher numbers first. Default 0.</p></td>
+<td><p>A prioridade de execução. Maior números primeiro. Padrão 0.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
+<div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Acenandos" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>

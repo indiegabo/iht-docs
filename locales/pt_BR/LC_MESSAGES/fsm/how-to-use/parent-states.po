@@ -20,21 +20,23 @@ msgstr ""
 
 #: ../../source/fsm/how-to-use/parent-states.rst:4
 msgid "Parent States"
-msgstr ""
+msgstr "Estados Base"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:7
 msgid "Wait a minute... parents?"
-msgstr ""
+msgstr "Pera, Base?"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:9
 msgid "Yes! Parents!"
-msgstr ""
+msgstr "Sim! Estados Base!!"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:11
 msgid ""
 "You can create a state wich holds the same group of properties and "
 "functionalities for several other child states."
 msgstr ""
+"Você pode criar um estado que possui as mesmas propriedades e "
+"funcionalidades para compartilhar com vários outros estados filhos."
 
 #: ../../source/fsm/how-to-use/parent-states.rst:13
 msgid ""
@@ -43,26 +45,32 @@ msgid ""
 "of properties. You can create a parent state and then create child states"
 " that inherit from that. Like the following example:"
 msgstr ""
+"Digamos que você entende que algum ator de seu joguinho possui vários estados que "
+"podem transitar para os mesmos estados. Ou compartilhar algumas "
+"propriedades. Você pode criar um estado base e então criar estados "
+"filhos que herdam do mesmo. Como o exemplo abaixo:"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:16
 msgid "First, create a parent state:"
-msgstr ""
+msgstr "Primeiro, crie um estado base:"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:42
 msgid "Now we can create a GroundedState wich will inherit all those transitions:"
-msgstr ""
+msgstr "Agora, podemos criar um GroundedState que herdará todas essas transições:"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:54
 msgid "But say you need to register new transitions for your child state:"
-msgstr ""
+msgstr "Mas digamos que você precisa registrar novas transições para seu estado filho:"
 
 #: ../../source/fsm/how-to-use/parent-states.rst:70
 msgid ""
 "For me personally i find this quite handy. Tons of code can be avoided "
 "and you keep your project organized."
 msgstr ""
+"Pessoalmente, eu acho isso muito útil. Evita "
+"muita codificação e mantém as coisas organizadas."
 
 #: ../../source/fsm/how-to-use/parent-states.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabino Acenando"
 

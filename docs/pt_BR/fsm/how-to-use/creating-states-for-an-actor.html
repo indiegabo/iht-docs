@@ -29,8 +29,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Buscar" href="../../search.html" />
-    <link rel="next" title="Using the state machine" href="using-the-state-machine.html" />
-    <link rel="prev" title="Setting up an Actor" href="setting-up-an-actor.html" /> 
+    <link rel="next" title="Usando a Máquina de estados" href="using-the-state-machine.html" />
+    <link rel="prev" title="Configurando um ator" href="setting-up-an-actor.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,24 +55,24 @@
 <p class="caption" role="heading"><span class="caption-text">Ferramentas Disponíveis</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../welcome.html">FSM</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#what-is-a-finite-state-machine">What is a Finite State Machine?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#why-this-fsm">Why this FSM?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-it-works">How it Works</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../welcome.html#how-to-use">How to use</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="setting-up-an-actor.html">Setting up an Actor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#what-is-a-finite-state-machine">O que é uma Máquina de Estados Finita?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#why-this-fsm">Porquê esta FSM?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#how-it-works">Como funciona</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../welcome.html#how-to-use">Como usar</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="setting-up-an-actor.html">Configurando um ator</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Criando Estados para um Ator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#what-is-a-state">What is a state?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-usage-strategy">The usage strategy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-code">The code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-a-state">O que é um estado?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-usage-strategy">A estratégia de uso</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-code">O Código</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#onload">OnLoad()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#onenter">OnEnter()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#onexit">OnExit()</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tickers">Tickers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transitioning-between-states">Transitioning Between States</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-inspector">The inspector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transitioning-between-states">Transitando entre estados</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-inspector">O Inspetor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="using-the-state-machine.html">Using the state machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="using-the-state-machine.html">Usando a Máquina de estados</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parent-states.html">Parent States</a></li>
 </ul>
 </li>
@@ -110,15 +110,13 @@
   <section id="creating-states-for-an-actor">
 <span id="creating-states-for-an-actor-page"></span><h1>Criando Estados para um Ator<a class="headerlink" href="#creating-states-for-an-actor" title="Link permanente para este cabeçalho"></a></h1>
 <section id="what-is-a-state">
-<h2>What is a state?<a class="headerlink" href="#what-is-a-state" title="Link permanente para este cabeçalho"></a></h2>
-<p>A state represents a specific group of actions that should be performed while an actor’s specific condition is met.</p>
+<h2>O que é um estado?<a class="headerlink" href="#what-is-a-state" title="Link permanente para este cabeçalho"></a></h2>
+<p>Um estado representa um grupo de ações que devem ser executadas enquanto uma condição específica do ator é atendida.</p>
 </section>
 <section id="the-usage-strategy">
-<h2>The usage strategy<a class="headerlink" href="#the-usage-strategy" title="Link permanente para este cabeçalho"></a></h2>
-<p>After being correctly crafted, a <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script should be attached to the same GameObject as the
-<a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a>. The machine will then automatically recognize it and use it as it should.</p>
-<p>Also, the <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> class, as the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> class, is abstract. It is so because a state is specific for an specific actor.
-Being that way, it does not make any sense to a state to exist without knowing its reason for being.</p>
+<h2>A estratégia de uso<a class="headerlink" href="#the-usage-strategy" title="Link permanente para este cabeçalho"></a></h2>
+<p>Após ser corretamente criado, um script de <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">Estado</span></a> deve ser anexado ao mesmo GameObject da <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a>. A máquina automaticamente irá reconhecer o estado usa-lodevidamente.</p>
+<p>Além disso, a classe <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> é abstrata, assim como a classe <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a>. Porque um estado é específico para um ator específico. Sendo assim, não faz sentidoque um estado exista sem que se saiba porquê ele está sendo criado.</p>
 <video width="800" height="450" loop autoplay muted controls>
    <source src="../../_static/videos/attaching-states.mp4" type="video/mp4">
 </video><div class="line-block">
@@ -126,8 +124,8 @@ Being that way, it does not make any sense to a state to exist without knowing i
 </div>
 </section>
 <section id="the-code">
-<h2>The code<a class="headerlink" href="#the-code" title="Link permanente para este cabeçalho"></a></h2>
-<p>Below is the base code for a successful state. Take a look at it and feel free to copy and use it as you wish.</p>
+<h2>O Código<a class="headerlink" href="#the-code" title="Link permanente para este cabeçalho"></a></h2>
+<p>Abaixo está o código base para um estado bem sucedido. Dê uma olhada nele e sinta-se livre para copiar e usar como quiser.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Collections</span><span class="p">;</span><span class="w"></span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"></span>
@@ -173,19 +171,17 @@ Being that way, it does not make any sense to a state to exist without knowing i
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>And, of course, there is a Script Template ready for you at <em>Create</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>IndieGabo</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>FSM</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>New State</em>.</p>
+<p>E, claro, há um Modelo de Script pronto para você em <em>Create</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>IndieGabo</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>FSM</em> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <em>New State</em>.</p>
 <video width="800" height="450" loop autoplay muted controls>
    <source src="../../_static/videos/new-state-from-template.mp4" type="video/mp4">
 </video><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Ok. Now that we’ve seen the code, let’s take a deep dive into each of those methods. All these methods are optional and you only need to implement the ones
-you will use inside your state.</p>
+<p>Ok. Agora que vimos o código, vamos dar uma olhada em cada um de seus métodos. Todos eles são opcionais e você só precisa implementar os que você vai usar dentro do seu estado.</p>
 </section>
 <section id="onload">
 <h2>OnLoad()<a class="headerlink" href="#onload" title="Link permanente para este cabeçalho"></a></h2>
-<p>This method represents the moment a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> loads this <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script into its handled states. So it is inside
-the <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> that you should put any logic regardind initialization <strong>before</strong> the machine starts running.</p>
+<p>Este método representa o momento em que a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> carrega este script de <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> como um de seus estados. Então, é no <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> que você deve colocar qualquer lógica que seja necessária para inicialização <strong>antes</strong> que a máquina comece a rodar.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
 <span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Falling</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
@@ -199,13 +195,12 @@ the <code class="docutils literal notranslate"><span class="pre">State.OnLoad()<
 <span class="c1">// Some other code</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> is the best place to register transitions. Wich we will cover on the
-<a class="reference internal" href="#transitioning-between-states"><span class="std std-ref">Transitioning Between States</span></a> section.</p>
-<p>This method is called only once in the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> life cycle.</p>
+<p>O <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> é o melhor lugar para registrar transições. Vamos dar uma olhada melhor em transições na seção <a class="reference internal" href="#transitioning-between-states"><span class="std std-ref">Transitando entre estados</span></a>.</p>
+<p>Este método é chamado apenas uma vez no ciclo de vida da <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a>.</p>
 </section>
 <section id="onenter">
 <h2>OnEnter()<a class="headerlink" href="#onenter" title="Link permanente para este cabeçalho"></a></h2>
-<p>This method is called the <strong>exact moment</strong> a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> sets this <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script as its current state.</p>
+<p>Este método é chamado o <strong>momento exato</strong> que a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> define este script de <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> como seu estado atual.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnEnter</span><span class="p">()</span><span class="w"></span>
@@ -216,12 +211,11 @@ the <code class="docutils literal notranslate"><span class="pre">State.OnLoad()<
 <span class="c1">// Some other code</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">State.OnEnter()</span></code> is perfect for start playing animations, initializing variables, properties and etc.</p>
+<p>O <code class="docutils literal notranslate"><span class="pre">State.OnEnter()</span></code> é o melhor lugar para iniciar animações, inicializar variáveis, propriedades e etc.</p>
 </section>
 <section id="onexit">
 <h2>OnExit()<a class="headerlink" href="#onexit" title="Link permanente para este cabeçalho"></a></h2>
-<p>This method is called <strong>right before</strong> a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> wich has this <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script as its current state, transition into another
-state.</p>
+<p>Este método é chamado <strong>exatamente antes</strong> que a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> que tem este script de <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> como seu estado atual, transite para outro estado.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnExit</span><span class="p">()</span><span class="w"></span>
@@ -232,17 +226,16 @@ state.</p>
 <span class="c1">// Some other code</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">State.OnExit()</span></code> is perfect place to stop animations and reset variables, properties and etc.</p>
+<p>O <code class="docutils literal notranslate"><span class="pre">State.OnExit()</span></code> é o melhor lugar para parar animações e resetar variáveis, propriedades e etc.</p>
 </section>
 <section id="tickers">
 <h2>Tickers<a class="headerlink" href="#tickers" title="Link permanente para este cabeçalho"></a></h2>
-<p>Once a State is defined as current state by the machine, its “Ticker methods” will be called at each
-time its actor “frame handlers” are executed.</p>
-<p>They are:</p>
+<p>Uma vez que um estado é definido como estado atual pela máquina, seus métodos “Ticker” serão chamados toda vez que os “Frame Handlers” do ator são executados.</p>
+<p>São eles:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Tick()</span></code>: Called every time the actor <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html">Update()</a> method is called.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LateTick()</span></code>: Called every time the actor <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html">LateUpdate()</a> method is called.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FixedTick()</span></code>: Called every time the actor <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate()</a> method is called.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Tick()</span></code>: Chamado toda vez que o método <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html">Update()</a> do ator é chamado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LateTick()</span></code>: Chamado toda vez que o método <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html">LateUpdate()</a> do ator é chamado.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FixedTick()</span></code>: Chamado toda vez que o método <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html">FixedUpdate()</a> do ator é chamado.</p></li>
 </ol>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
@@ -274,21 +267,19 @@ time its actor “frame handlers” are executed.</p>
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
-<p>If you are not familiar with the <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html">LateUpdate()</a> method, it is called once per frame after the
-<a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html">Update()</a> as a way to organize your script execution.</p>
+<p>Se você não está familiarizado com o método <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.LateUpdate.html">LateUpdate()</a>, ele é chamado uma vez por frame após o <a class="reference external" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html">Update()</a></p>
 </div>
-<p>Refer to the <a class="reference internal" href="using-the-state-machine.html#lifecycle"><span class="std std-ref">IndieGabo’s FSM Life Cycle</span></a> for visual information about Tickers being called.</p>
+<p>Veja o <a class="reference internal" href="using-the-state-machine.html#lifecycle"><span class="std std-ref">ciclo de vida da FSM</span></a> para informações visuais sobre os Tickers chamados.</p>
 </section>
 <section id="transitioning-between-states">
-<span id="id3"></span><h2>Transitioning Between States<a class="headerlink" href="#transitioning-between-states" title="Link permanente para este cabeçalho"></a></h2>
-<p>There are two ways for a state to transition into another state:</p>
+<span id="id3"></span><h2>Transitando entre estados<a class="headerlink" href="#transitioning-between-states" title="Link permanente para este cabeçalho"></a></h2>
+<p>Existem duas maneiras de um estado transitar para outro estado:</p>
 <ol class="arabic simple">
-<li><p>By calling the Machine’s <code class="docutils literal notranslate"><span class="pre">ChangeState()</span></code> method.</p></li>
+<li><p>Chamando o método <code class="docutils literal notranslate"><span class="pre">ChangeState()</span></code> da Máquina.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>As seen on the <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State Documentation</span></a>, all the states hold reference to the Machine they belong to. Therefore, accessing
-the machine’s methods from within a state is as easy as using its <code class="docutils literal notranslate"><span class="pre">State.machine</span></code> property as we can see below.</p>
+<p>Como visto na <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">Documentação do Estado</span></a>, todos os estados guardam referência à Máquina que eles pertencem. Portanto, acessar os métodos e propriedades da Máquina de dentro de um estado é fácil como acessar a propriedade <code class="docutils literal notranslate"><span class="pre">State.machine</span></code>.</p>
 </div>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
@@ -307,13 +298,10 @@ the machine’s methods from within a state is as easy as using its <code class=
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>By registering a <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> inside its <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> using the <code class="docutils literal notranslate"><span class="pre">State.AddTransition()</span></code> method.</p></li>
+<li><p>Registrando uma <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> dentro de seu <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> usando o método <code class="docutils literal notranslate"><span class="pre">State.AddTransition()</span></code>.</p></li>
 </ol>
-<p>Using this approach (wich is highly recommended) the machine will, at each of the “frame handlers”, evaluate if any condition is met
-considering given priorities. If so, it will automatically transition into the target state.</p>
-<p>A <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> consists in a <code class="docutils literal notranslate"><span class="pre">Condition</span></code>, a target <code class="docutils literal notranslate"><span class="pre">State</span></code> and a <code class="docutils literal notranslate"><span class="pre">priotity</span></code> level. But there is no need for
-you to instantiate it. Just call the <code class="docutils literal notranslate"><span class="pre">State.AddTransition()</span></code> method and pass the those 3 arguments. I take care of the rest for you. Here is how
-you use it:</p>
+<p>Usando esta abordagem (que é altamente recomendada) a máquina, em cada  “Frame Handler” do ator, avaliará se alguma condição de suas <code class="docutils literal notranslate"><span class="pre">`transitions</span></code> é cumprida, considerando suas prioridades. Caso alguma seja avaliada como verdade, ele irá automaticamente transitar para o estado alvo da <code class="docutils literal notranslate"><span class="pre">StateTransition</span></code>.</p>
+<p>A <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> consiste em uma <code class="docutils literal notranslate"><span class="pre">Condition</span></code>, um <code class="docutils literal notranslate"><span class="pre">State</span></code> alvo e uma <code class="docutils literal notranslate"><span class="pre">prioridade</span></code>. Mas não é necessário que você instancie ela. Só chame o método <code class="docutils literal notranslate"><span class="pre">State.AddTransition()</span></code> e passe os 3 argumentos. Eu cuido do resto por você. Aqui está como você usa:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Condition</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">anotherThing</span><span class="p">;</span><span class="w"></span>
 <span class="n">State</span><span class="w"> </span><span class="n">someState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SomeState</span><span class="p">&gt;();</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
@@ -321,7 +309,7 @@ you use it:</p>
 <span class="n">AddTransition</span><span class="p">(</span><span class="n">Condition</span><span class="p">(),</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>But, if you somehow prefer, here is how a StateTransition is instantiated and registered:</p>
+<p>Mas, se você quiser, aqui está como uma StateTransition é instanciada e registrada:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Condition</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">anotherThing</span><span class="p">;</span><span class="w"></span>
 <span class="n">State</span><span class="w"> </span><span class="n">someState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SomeState</span><span class="p">&gt;();</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
@@ -330,14 +318,9 @@ you use it:</p>
 <span class="n">AddTransition</span><span class="p">(</span><span class="n">transition</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Note that to declare a <code class="docutils literal notranslate"><span class="pre">Condition</span></code> you <strong>MUST</strong> approach using a
-<a class="reference external" href="https://docs.microsoft.com/en-us/dotnet/api/system.func-1?view=net-6.0">Func&lt;TResult&gt; Delegate</a>. Do not worry if you are not
-familiar with this yet. All you need to know is that the machine will call this as a method (function) and its context will be
-evaluated as true or false only when the machine do so. In case this represents news for you, for now,
-just follow the syntax in the code below each time you want to register a <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> in a state.</p>
-<p>To declare the target state, since all states are components attached to the same GameObject, you can just use the <code class="docutils literal notranslate"><span class="pre">GetComponent&lt;State&gt;()</span></code> method.</p>
-<p>At last, priority for the machine is read <strong>descending</strong>. Wich means the higher the integer you give as third argument, sooner its condition will be evaluated.
-otherwise it will be read as the declaration order. The default priority value is <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p>Note que para declarar uma <code class="docutils literal notranslate"><span class="pre">Condition</span></code> você <strong>DEVE</strong> proceder usando um <a class="reference external" href="https://docs.microsoft.com/pt-br/dotnet/api/system.func-1?view=net-6.0">Func&lt;TResult&gt; Delegar</a>. Não se preocupe se você não está familiarizado com isso ainda. Tudo que você precisa saber é que a máquina irá chamar essa <code class="docutils literal notranslate"><span class="pre">Condition()</span></code> como um método (função) e seu contexto será avaliado como verdadeiro ou falso somente quando a máquina assim o fizer. No caso disso ser novidade para você, por enquanto, apenas siga a sintaxe no código abaixo cada vez que você quiser registrar uma <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> em um estado.</p>
+<p>Para declarar o estado alvo, já que todos os estados são componentes anexados ao mesmo GameObject, você pode simplesmente usar o método <code class="docutils literal notranslate"><span class="pre">GetComponent&lt;State&gt;()</span></code>.</p>
+<p>Por último, a prioridade da máquina é lida de maneira <strong>descendente</strong>. O que significa que a maior prioridade que você dá como terceiro argumento, fará com que a <code class="docutils literal notranslate"><span class="pre">Condition()</span></code> da <code class="docutils literal notranslate"><span class="pre">StateTransition</span></code> seja avaliada antes. Fora isso, ela será lida como a ordem de declaração. O valor padrão da prioridade é <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
 <span class="c1">// Example of conditions using delegate functions and recurring to lambda functions</span>
@@ -359,21 +342,18 @@ otherwise it will be read as the declaration order. The default priority value i
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> is called only once on the Machine’s life cycle. Meaning that any <code class="docutils literal notranslate"><span class="pre">GetComponent&lt;State&gt;()</span></code>
-(or, well… anything else) used inside of it will not be called multiple times.</p>
+<p>O <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> é chamado apenas uma vez no ciclo de vida da Máquina. Significando que qualquer <code class="docutils literal notranslate"><span class="pre">GetComponent&lt;State&gt;()</span></code> (ou bem… qualquer lógica) dentro dele não será chamado múltiplas vezes.</p>
 </div>
 </section>
 <section id="the-inspector">
-<h2>The inspector<a class="headerlink" href="#the-inspector" title="Link permanente para este cabeçalho"></a></h2>
-<p>For a simple state, a simple name. Just that. You can set a Name for your state using Unity’s inspector so you get some better visual feedback
-when taking a look at the state machine.</p>
-<p>Set a name:</p>
-<img alt="State Name on inspector" src="../../_images/state-name-inspector.png" />
-<p>And see it in action while inpecting the StateMachine:</p>
-<img alt="State Name appearing on machine" src="../../_images/state-machine-inspector-runtime.png" />
-<p>That is it about creating a state for now. Let me show you a little about <a class="reference internal" href="using-the-state-machine.html#using-the-state-machine-class"><span class="std std-ref">how to use</span></a>
-our precious state machine.</p>
-<div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
+<h2>O Inspetor<a class="headerlink" href="#the-inspector" title="Link permanente para este cabeçalho"></a></h2>
+<p>Para um estado simples, um nome simples. E é isso. Você pode definir um Nome para o seu estado usando o Inspetor do Unity, então você terá feedback visual quando inspecionar a máquina de estados.</p>
+<p>Defina um nome:</p>
+<img alt="O nome do estado no inspetor" src="../../_images/state-name-inspector.png" />
+<p>A máquina de estados em ação exibindo o nome do estado atual:</p>
+<img alt="O nome do estado aparecendo no inspetor da máquina" src="../../_images/state-machine-inspector-runtime.png" />
+<p>Isso é tudo sobre criar um estado por enquanto. Me deixa mostrar um pouco mais sobre <a class="reference internal" href="using-the-state-machine.html#using-the-state-machine-class"><span class="std std-ref">como usar</span></a> nossa máquina de estados maravilhosa.</p>
+<div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabiniho Acenando" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -384,8 +364,8 @@ our precious state machine.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
-        <a href="setting-up-an-actor.html" class="btn btn-neutral float-left" title="Setting up an Actor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="using-the-state-machine.html" class="btn btn-neutral float-right" title="Using the state machine" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="setting-up-an-actor.html" class="btn btn-neutral float-left" title="Configurando um ator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="using-the-state-machine.html" class="btn btn-neutral float-right" title="Usando a Máquina de estados" accesskey="n" rel="next">Próximo <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

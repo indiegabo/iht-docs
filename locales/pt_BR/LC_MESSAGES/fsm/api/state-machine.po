@@ -28,11 +28,11 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:14
 msgid "Declaration"
-msgstr ""
+msgstr "Declaração"
 
 #: ../../source/fsm/api/state-machine.rst:22
 msgid "Fields"
-msgstr ""
+msgstr "Campos (Fields)"
 
 #: ../../source/fsm/api/state-machine.rst:29
 #: ../../source/fsm/api/state-machine.rst:33
@@ -48,6 +48,8 @@ msgid ""
 "The actor related to this state machine |br| just for visual feedback at "
 "the inspector"
 msgstr ""
+"O ator relacionado a este estado máquina |br| apenas para feedback visual "
+"no inspetor"
 
 #: ../../source/fsm/api/state-machine.rst:31
 msgid "``protected MachineStatus``"
@@ -59,7 +61,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:31
 msgid "The machine current status"
-msgstr ""
+msgstr "O status atual da máquina"
 
 #: ../../source/fsm/api/state-machine.rst:33
 msgid "``currentStateName``"
@@ -67,7 +69,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:33
 msgid "A visual feedback for inspector"
-msgstr ""
+msgstr "Um feedback visual para o inspetor"
 
 #: ../../source/fsm/api/state-machine.rst:35
 msgid "``protected State``"
@@ -79,7 +81,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:35
 msgid "The default state to be set using inspector"
-msgstr ""
+msgstr "O estado padrão para ser definido usando o inspetor"
 
 #: ../../source/fsm/api/state-machine.rst:37
 #: ../../source/fsm/api/state-machine.rst:39
@@ -92,7 +94,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:37
 msgid "Visual feedback"
-msgstr ""
+msgstr "Feedback visual"
 
 #: ../../source/fsm/api/state-machine.rst:39
 msgid "``states``"
@@ -103,10 +105,12 @@ msgid ""
 "List of states attached to the machine's GameObject. |br| Will be loaded "
 "at ``StateMachine.SetUp()``"
 msgstr ""
+"Lista de estados anexados ao GameObject da máquina. |br| Será carregado "
+"durante o ``StateMachine.SetUp()``"
 
 #: ../../source/fsm/api/state-machine.rst:43
 msgid "Properties"
-msgstr ""
+msgstr "Propriedades (Properties)"
 
 #: ../../source/fsm/api/state-machine.rst:50
 msgid "``public Actor { get; }``"
@@ -121,6 +125,8 @@ msgid ""
 "The state machine's actor instance. |br| This is set in the Machine's "
 "SetUp method."
 msgstr ""
+"A instância do ator da máquina. |br| Este é definido no método SetUp da "
+"máquina."
 
 #: ../../source/fsm/api/state-machine.rst:52
 msgid "``public MachineStatus { get; }``"
@@ -132,7 +138,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:52
 msgid "A getter for the machine's status"
-msgstr ""
+msgstr "Um getter para o status da máquina"
 
 #: ../../source/fsm/api/state-machine.rst:54
 msgid "``public State { get; protected set; }``"
@@ -144,7 +150,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:54
 msgid "The machine's current state"
-msgstr ""
+msgstr "O estado atual da máquina"
 
 #: ../../source/fsm/api/state-machine.rst:56
 #: ../../source/fsm/api/state-machine.rst:60
@@ -157,7 +163,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:56
 msgid "A getter for ``defaultState``"
-msgstr ""
+msgstr "Um getter para ``defaultState``"
 
 #: ../../source/fsm/api/state-machine.rst:58
 msgid "``public List<State> { get; }``"
@@ -169,7 +175,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:58
 msgid "The list of attached states"
-msgstr ""
+msgstr "Um lista de estados anexados"
 
 #: ../../source/fsm/api/state-machine.rst:60
 msgid "``RecognizedActor``"
@@ -180,10 +186,12 @@ msgid ""
 "The machine's actor. Either attached to |br| the machine's GameObject or "
 "a parent"
 msgstr ""
+"O ator da máquina. Anexado ao |br| GameObject da máquina ou um "
+"pai"
 
 #: ../../source/fsm/api/state-machine.rst:64
 msgid "Methods"
-msgstr ""
+msgstr "Métodos"
 
 #: ../../source/fsm/api/state-machine.rst:71
 #: ../../source/fsm/api/state-machine.rst:77
@@ -204,11 +212,11 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:71
 msgid "Called by the :ref:`Actor <actor-class>` to initialize the machine"
-msgstr ""
+msgstr "Chamado pelo :ref:`Ator <actor-class>` para inicializar a máquina"
 
 #: ../../source/fsm/api/state-machine.rst:73
 msgid "Arguments: ``Actor actor``"
-msgstr ""
+msgstr "Argumentos: ``Actor actor``""
 
 #: ../../source/fsm/api/state-machine.rst:75
 #: ../../source/fsm/api/state-machine.rst:89
@@ -221,7 +229,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:75
 msgid "Loads all states attached into the machine's GameObject."
-msgstr ""
+msgstr "Carrega todos os estados anexados ao GameObject da máquina."
 
 #: ../../source/fsm/api/state-machine.rst:77
 msgid "``StartMachine()``"
@@ -232,6 +240,8 @@ msgid ""
 "If the machine is ready, sets the ``currentState`` to de default state "
 "and ``status`` to ``On``"
 msgstr ""
+"Se a máquina está pronta, define o ``currentState`` como o "
+"estado padrão e o ``status`` como ``On``"
 
 #: ../../source/fsm/api/state-machine.rst:79
 msgid "``Resume()``"
@@ -263,11 +273,11 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:85
 msgid "Sets the ``currentState`` as the given state"
-msgstr ""
+msgstr "Define o ``currentState`` como o estado fornecido"
 
 #: ../../source/fsm/api/state-machine.rst:87
 msgid "Arguments: ``State state``"
-msgstr ""
+msgstr "Argumentos: ``State state``""
 
 #: ../../source/fsm/api/state-machine.rst:89
 msgid "``EvaluateNextState()``"
@@ -279,6 +289,8 @@ msgid ""
 "transition-class>` is met, |br| the machine will transition into the "
 "target state"
 msgstr ""
+"Caso alguma condição das :ref:`transições transição do<state-transition-class>` ``currentState`` "
+"seja atendida, |br| a máquina irá transitar para o estado alvo"
 
 #: ../../source/fsm/api/state-machine.rst:91
 msgid "``protected virtual State``"
@@ -293,6 +305,9 @@ msgid ""
 "Checks the ``StateTransition.Condition()`` of all ``State.transitions`` "
 "of the ``currentState``. Returns null if no condition is met."
 msgstr ""
+"Verifica a ``StateTransition.Condition()`` de todas as "
+"transições do ``currentState``. "
+"Retorna null se nenhuma condição for atendida."
 
 #: ../../source/fsm/api/state-machine.rst:93
 msgid "``SetDefaultState()``"
@@ -304,7 +319,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:95
 msgid "Arguments: ``T`` where ``T`` : ``State``"
-msgstr ""
+msgstr "Argumentos: ``T`` onde ``T`` : ``State``"
 
 #: ../../source/fsm/api/state-machine.rst:97
 msgid "``Tick()``"
@@ -316,6 +331,9 @@ msgid ""
 "Forces machine to |br| evaluate if should change the ``currentState`` and"
 " calls |br| the ``currentState`` ``State.Tick()``"
 msgstr ""
+"Chamado a cada :ref:`Actor <actor-class>` ``MonoBehaviour.Update()``. "
+"Força a máquina a |br| avaliar se deve mudar o ``currentState`` e "
+"chama |br| o ``currentState`` ``State.Tick()``"
 
 #: ../../source/fsm/api/state-machine.rst:99
 msgid "``LateTick()``"
@@ -327,6 +345,9 @@ msgid ""
 "Forces machine to |br| evaluate if should change the ``currentState`` and"
 " calls |br| the ``currentState`` ``State.LateTick()``"
 msgstr ""
+"Chamado a cada :ref:`Actor <actor-class>` ``MonoBehaviour.Update()``. "
+"Força a máquina a |br| avaliar se deve mudar o ``currentState`` e "
+"chama |br| o ``currentState`` ``State.Tick()``"
 
 #: ../../source/fsm/api/state-machine.rst:101
 msgid "``FixedTick()``"
@@ -338,10 +359,13 @@ msgid ""
 " Forces machine to |br| evaluate if should change the ``currentState`` "
 "and calls |br| the ``currentState`` ``State.FixedTick()``"
 msgstr ""
+"Chamado a cada :ref:`Actor <actor-class>` ``MonoBehaviour.FixedUpdate()``. "
+"Força a máquina a |br| avaliar se deve mudar o ``currentState`` e "
+"chama |br| o ``currentState`` ``State.FixedTick()``"
 
 #: ../../source/fsm/api/state-machine.rst:106
 msgid "Events"
-msgstr ""
+msgstr "Eventos"
 
 #: ../../source/fsm/api/state-machine.rst:112
 msgid "``public UnityEvent<State>``"
@@ -353,9 +377,9 @@ msgstr ""
 
 #: ../../source/fsm/api/state-machine.rst:112
 msgid "Invoked every time the machine changes the ``currentState``"
-msgstr ""
+msgstr "Invocado toda vez que a máquina muda o ``currentState``"
 
 #: ../../source/fsm/api/state-machine.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabinho Acenando"
 

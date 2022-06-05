@@ -63,31 +63,35 @@ msgstr ""
 
 #: ../../source/fsm/welcome.rst:21
 msgid "Key pratical benefits of using this FSM:"
-msgstr ""
+msgstr "Benefícios práticos da utilização desta FSM:"
 
 #: ../../source/fsm/welcome.rst:23
 msgid "Helps you keep things organized"
-msgstr ""
+msgstr "Te ajuda a manter tudo organizado"
 
 #: ../../source/fsm/welcome.rst:24
 msgid ""
 "Once you understand how it works it'll save you hours of debugging since "
 "you will know exactly where each functionality is being executed"
 msgstr ""
+"Uma vez que você entenda como funciona, você vai economizar horas de depuração, "
+"pois você vai saber exatamente onde cada ação está sendo executada"
 
 #: ../../source/fsm/welcome.rst:25
 msgid ""
 "Avoids overload of unecessary if statements since each state will only "
 "check for the conditions based on their registered transitions"
 msgstr ""
+"Evita sobrecarga de if statements, pois cada estado só verificará as "
+"condições baseadas nas transições registradas"
 
 #: ../../source/fsm/welcome.rst:26
 msgid "You can get it running in like 5 minutes"
-msgstr ""
+msgstr "5 minutos pra entender como funciona e colocar pra rodar"
 
 #: ../../source/fsm/welcome.rst:29
 msgid "How it Works"
-msgstr ""
+msgstr "Como funciona"
 
 #: ../../source/fsm/welcome.rst:31
 msgid ""
@@ -97,6 +101,11 @@ msgid ""
 "registered into the ``state machine`` being that a ``state`` knows when "
 "to transition into another ``state`` under specific conditions."
 msgstr ""
+"Conside um ``ator`` qualquer coisa no seu jogo que "
+"realiza várias ações. A ``máquina de estados`` então é configurada para "
+"regular os estados de ações de um ``ator``. Os estados do ``ator`` devem ser "
+"registrados na ``máquina de estados``, sendo que um ``estado`` sabe exatamente quando e para qual "
+"outro ``estado`` transitar sob condições específicas."
 
 #: ../../source/fsm/welcome.rst:35
 msgid ""
@@ -104,10 +113,13 @@ msgid ""
 "some kind of status or definition. Our states **actually handles** what "
 "its ``actor`` performs while on a given ``state`` of actions."
 msgstr ""
+"Além disso, para o uso desta FSM, consideramos que um ``estado`` não "
+"só é um tipo de status ou definição. Os estados **realmente executam** "
+"o que o ``ator`` deve fazer enquanto em um determinado ``estado`` de ações."
 
 #: ../../source/fsm/welcome.rst:39
 msgid "How to use"
-msgstr ""
+msgstr "Como usar"
 
 #: ../../source/fsm/welcome.rst:50
 msgid "API"
@@ -115,5 +127,4 @@ msgstr ""
 
 #: ../../source/fsm/welcome.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
-
+msgstr "Gabinho Acenando"

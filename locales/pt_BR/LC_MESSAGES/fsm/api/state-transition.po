@@ -28,11 +28,11 @@ msgstr ""
 
 #: ../../source/fsm/api/state-transition.rst:14
 msgid "Declaration"
-msgstr ""
+msgstr "Declaração"
 
 #: ../../source/fsm/api/state-transition.rst:22
 msgid "Properties"
-msgstr ""
+msgstr "Propriedades (Properties)"
 
 #: ../../source/fsm/api/state-transition.rst:29
 msgid "``public Func<bool> {get; protected set;}``"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-transition.rst:29
 msgid "A delegate function representing the transition's condition"
-msgstr ""
+msgstr "Uma função delegada que representa a condição da transição"
 
 #: ../../source/fsm/api/state-transition.rst:31
 msgid "``public State {get; protected set;}``"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../../source/fsm/api/state-transition.rst:31
 msgid "The state wich should be transitioned into based on ``Condition``"
-msgstr ""
+msgstr "O estado alvo para o qual a máquina deve transitar br baseado na ``Condition``"
 
 #: ../../source/fsm/api/state-transition.rst:33
 msgid "``public int {get; protected set;}``"
@@ -68,9 +68,9 @@ msgstr ""
 
 #: ../../source/fsm/api/state-transition.rst:33
 msgid "The execution priority. Higher numbers first. Default 0."
-msgstr ""
+msgstr "A prioridade de execução. Maior números primeiro. Padrão 0."
 
 #: ../../source/fsm/api/state-transition.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabinho Acenandos"
 

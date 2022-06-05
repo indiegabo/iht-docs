@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IndieGabo's Handy Tools \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-04 18:57-0300\n"
+"POT-Creation-Date: 2022-06-05 00:01-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,24 +44,30 @@ msgid ""
 "attach states to the same GameObject, set a default state and you are "
 "good to go."
 msgstr ""
+"O componente :ref:`StateMachine <state-machine-class>`, diferente dos "
+"atores e estados, é um componente pronto para uso. Então você não precisa"
+" se preocupar com criar scripts para user ele. Basta anexa-lo a um "
+"GameObject, anexar estados ao mesmo GameObject, definir um estado padrão "
+"e tudo certo!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:15
-msgid ""
-"But, if you want to understand a little about it// Some other code Let's "
-"do it!"
+#, fuzzy
+msgid "But, if you want to understand a little about it... Let's do it!"
 msgstr ""
+"Mas, se você quiser saber um pouco mais sobre a Máquina de estados, vamos"
+" nessa!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:20
 msgid "Life Cycle"
-msgstr ""
+msgstr "Ciclo de vida"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:22
 msgid "Let's take a look at the machine's Life Cycle:"
-msgstr ""
+msgstr "Vamos dar uma olhada no ciclo de vida da Máquina de estados:"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:-1
 msgid "Creating actor script from menu"
-msgstr ""
+msgstr "Criando script de ator a partir do menu"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:30
 msgid ""
@@ -69,14 +75,17 @@ msgid ""
 "``Loading``, ``Ready``, ``On`` and ``Paused``. They are declared as the "
 "enum ``IndieGabo.FSM.MachineStatus``."
 msgstr ""
+"A ``StateMachine`` na versão atual tem 5 estados: ``Off``, ``Loading``, "
+"``Ready``, ``On`` e ``Paused``. Eles são declarados como o enum "
+"``IndieGabo.FSM.MachineStatus``."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:33
 msgid "I'd like to focus some attention on these steps:"
-msgstr ""
+msgstr "Eu gostaria de dar atenção aos seguintes passos:"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:35
 msgid "The machine first ``StateMachine.status`` is ``MachineStatus.Off``."
-msgstr ""
+msgstr "O primeiro ``StateMachine.status`` da máquina é ``MachineStatus.Off``."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:37
 msgid ""
@@ -86,12 +95,19 @@ msgid ""
 "Awake, the actor calls ``StateMachine.SetUp()`` letting it know who its "
 "actor is."
 msgstr ""
+"Note que, mesmo que a máquina pertença a MonoBehaviour, é o componente "
+":ref:`Actor <actor-class>` que configura a máquina. Porque a máquina "
+"só pode começar a operar quando o ator já está acordado (Awake()). Uma vez "
+"acordado, o ator chama ``StateMachine.SetUp()``, informando a máquina quem "
+"ela deve tratar como o seu ator."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:41
 msgid ""
 "At this point the machine will change ``StateMachine.status`` from "
 "``MachineStatus.Off`` to ``MachineStatus.Loading``."
 msgstr ""
+"Nesse ponto, a máquina irá mudar ``StateMachine.status`` de "
+"``MachineStatus.Off`` para ``MachineStatus.Loading``."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:43
 msgid ""
@@ -102,12 +118,21 @@ msgid ""
 "registering any :ref:`StateTranstion <state-transition-class>` of your "
 "state inside its ``State.OnLoad()``."
 msgstr ""
+"Aqui, a máquina irá carregar todos os estados anexados ao seu GameObject"
+" e, para cada estado, chamar seu ``State.OnLoad()`` "
+"seguido do ``State.SortTransitions()``. Esse último método "
+"garante que as transições sejam ordenadas de acordo com suas prioridades. Vem daí a importância "
+"de registrar qualquer :ref:`StateTranstion <state-transition-class>` "
+"do seu estado dentro de seu ``State.OnLoad()``."
+
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:47
 msgid ""
 "Now the machine will change ``StateMachine.status`` from "
 "``MachineStatus.Loading`` to ``MachineStatus.Ready``."
 msgstr ""
+"Agora, a máquina irá mudar ``StateMachine.status`` de "
+"``MachineStatus.Loading`` para ``MachineStatus.Ready``."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:49
 msgid ""
@@ -115,6 +140,8 @@ msgid ""
 "``StateMachine.ChangeState()`` to set the chosen default state (At the "
 "inspector. By you. Do not forget to do it)."
 msgstr ""
+"Uma vez pronta (ready), a máquina irá definir o ``StateMachine.defaultState`` como o "
+"o ``StateMachine.currentState``. Lembra que você deve definir o ``StateMachine.defaultState`` usando o inspetor da Unity."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:52
 msgid ""
@@ -122,10 +149,13 @@ msgid ""
 "``MachineStatus.Ready`` to ``MachineStatus.On`` and it is running!!! "
 "Hurray!"
 msgstr ""
+"A máquina irá finalmente transitar o ``StateMachine.status`` de "
+"``MachineStatus.Ready`` para ``MachineStatus.On`` e está rodando!!! "
+"Boa!!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:55
 msgid "Tickers Methods and Machine Statuses"
-msgstr ""
+msgstr "Métodos Tickers e os status da Máquina"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:57
 msgid ""
@@ -135,6 +165,12 @@ msgid ""
 "long as the ``StateMachine.status`` is ``MachineStatus.On`` it will do "
 "so."
 msgstr ""
+"Uma vez que a máquina está ligada, significando que o ``StateMachine.status`` é "
+"``MachineStatus.On``, ela irá chamar os Tickers do ``StateMachine.currentState`` "
+"de acordo com os \"Frame Handlers\" do ator. "
+"Enquanto o ``StateMachine.status`` for "
+"``MachineStatus.On``, ela irá proceder desta forma."
+
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:60
 msgid ""
@@ -144,16 +180,23 @@ msgid ""
 "passed forward to the current state, therefore we can considered it as "
 "paused."
 msgstr ""
+"Se em qualquer momento você precisar pausar este comportamento, "
+"você pode chamar ``StateMachine.Pause()`` e o ``StateMachine.status`` "
+"será definido como ``MachineStatus.Paused``. Desta forma, nenhum dos "
+"Tickers será passado para o ``StateMachine.currentState``, portanto, podemos considerar "
+"que a máquina está pausada."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:74
 msgid ""
 "To unpause, simply call ``StateMachine.Resume()`` and the "
 "``StateMachine.status`` will be ``MachineStatus.On`` again."
 msgstr ""
+"Para continuar, simplesmente chame ``StateMachine.Resume()`` e o "
+"``StateMachine.status`` será definido como ``MachineStatus.On``."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:88
 msgid "Setting up the machine"
-msgstr ""
+msgstr "Configurando a máquina"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:90
 msgid ""
@@ -161,6 +204,10 @@ msgid ""
 ":ref:`StateMachine <state-machine-class>` component into it. Same goes "
 "for the :ref:`Actor <actor-class>`. Take a look:"
 msgstr ""
+"Você pode simplesmente criar um GameObject e anexar o "
+":ref:`StateMachine <state-machine-class>` componente dentro dele. "
+"Isto também vale para o :ref:`Actor <actor-class>`. "
+"Veja:"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:101
 msgid ""
@@ -169,10 +216,14 @@ msgid ""
 " creating an GameObject for the actor and use the machine as its child. "
 "Check it out:"
 msgstr ""
+"Mas, como o GameObject do ator tende a ter múltiplos componentes anexados "
+"a ele, para fins de organização, acho mais conveniente "
+"proceder criando um GameObject para o ator e usar a máquina em um GameObject filho do  "
+"GameObject do ator. "
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:112
 msgid "Both strategies will work transparently for you. Just choose yours."
-msgstr ""
+msgstr "Ambas as estratégias funcionarão transparentemente para você. Fique a vontade para escoher."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:114
 msgid ""
@@ -181,10 +232,15 @@ msgid ""
 ":ref:`StateMachine <state-machine-class>` component into any GameObject, "
 "feel free to search for it using the \"Add Component\" inspector button."
 msgstr ""
+"Como observamos, eu preparei um item de menu para você para colocar "
+"uma nova máquina de estado em sua hierarquia. Mas se você desejar "
+"anexar o componente :ref:`StateMachine <state-machine-class>` em qualquer "
+"GameObject, você pode procurar por ele usando o botão \"Add "
+"Component\" do inspetor."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:118
 msgid "All set!"
-msgstr ""
+msgstr "Tudo pronto!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:120
 msgid ""
@@ -192,12 +248,15 @@ msgid ""
 "classes. For now, i'd say you have all the tools needed to start "
 "benefiting from the state machine!"
 msgstr ""
+"Confira a documentação da API se você quiser saber mais sobre essas "
+"classes. Por enquanto, eu acho que você tem tudo o que precisa para "
+"começar a beneficiar da máquina de estados!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:123
 msgid "HURRAY!! Go do something awesome and let me know about it!"
-msgstr ""
+msgstr "Boaaaa!! Agora é só fazer algo maravilhoso. Não esquece de me avisar!!!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabinho Acenando"
 

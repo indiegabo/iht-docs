@@ -12,7 +12,7 @@ we can finally use the state machine.
 The :ref:`StateMachine <state-machine-class>` component, different from the actors and states, is a ready to use component. So you do not need to worry about creating any 
 script for it. Just attach to a GameObject, attach states to the same GameObject, set a default state and you are good to go.
 
-But, if you want to understand a little about it// Some other code Let's do it!
+But, if you want to understand a little about it... Let's do it!
 
 .. _lifecycle:
 
