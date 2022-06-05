@@ -25,7 +25,7 @@ msgid "Behold: THE STATE MACHINE!!!"
 msgstr ""
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:9
-msgid "Now that we know how to :ref:`setup an a actor <setting-up-an-actor-class>` and how to :ref:`create its states <creating-states-for-an-actor-page>` we can finally use the state machine."
+msgid "Now that we know how to :ref:`setup an a actor <setting-up-an-actor-page>` and how to :ref:`create its states <creating-states-for-an-actor-page>` we can finally use the state machine."
 msgstr ""
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:12

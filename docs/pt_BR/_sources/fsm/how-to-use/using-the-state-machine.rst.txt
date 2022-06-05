@@ -6,7 +6,7 @@ Using the state machine
 Behold: THE STATE MACHINE!!!
 ----------------------------
 
-Now that we know how to :ref:`setup an a actor <setting-up-an-actor-class>` and how to :ref:`create its states <creating-states-for-an-actor-page>`
+Now that we know how to :ref:`setup an a actor <setting-up-an-actor-page>` and how to :ref:`create its states <creating-states-for-an-actor-page>`
 we can finally use the state machine.
 
 The :ref:`StateMachine <state-machine-class>` component, different from the actors and states, is a ready to use component. So you do not need to worry about creating any 

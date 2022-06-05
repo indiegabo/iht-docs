@@ -1,4 +1,4 @@
-.. _setting-up-an-actor-class:
+.. _setting-up-an-actor-page:
 
 Setting up an Actor
 ===================

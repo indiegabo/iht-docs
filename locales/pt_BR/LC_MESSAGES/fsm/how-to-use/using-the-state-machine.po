@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IndieGabo's Handy Tools \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-04 14:28-0300\n"
+"POT-Creation-Date: 2022-06-04 18:57-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,18 +20,21 @@ msgstr ""
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:4
 msgid "Using the state machine"
-msgstr ""
+msgstr "Usando a Máquina de estados"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:7
 msgid "Behold: THE STATE MACHINE!!!"
-msgstr ""
+msgstr "Contemple: A MÁQUINA DE ESTADOS!!!"
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:9
 msgid ""
 "Now that we know how to :ref:`setup an a actor <setting-up-an-actor-"
-"class>` and how to :ref:`create its states <creating-states-for-an-actor-"
+"page>` and how to :ref:`create its states <creating-states-for-an-actor-"
 "page>` we can finally use the state machine."
 msgstr ""
+"Agora que sabemos como :ref:`configurar um ator <setting-up-an-actor-"
+"page>` e como :ref:`criar seus estados <creating-states-for-an-actor-"
+"page>` podemos finalmente usar a Máquina de estados."
 
 #: ../../source/fsm/how-to-use/using-the-state-machine.rst:12
 msgid ""

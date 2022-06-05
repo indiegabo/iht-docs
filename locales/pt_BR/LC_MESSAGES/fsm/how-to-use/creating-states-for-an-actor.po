@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:4
 msgid "Creating States for an Actor"
-msgstr ""
+msgstr "Criando Estados para um Ator"
 
 #: ../../source/fsm/how-to-use/creating-states-for-an-actor.rst:7
 msgid "What is a state?"

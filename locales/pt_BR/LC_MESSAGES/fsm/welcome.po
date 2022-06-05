@@ -24,27 +24,30 @@ msgstr ""
 
 #: ../../source/fsm/welcome.rst:6
 msgid "Much welcome to the IndieGabo's FSM!"
-msgstr ""
+msgstr "Muito boas vindas a FSM do IndieGabo!"
 
 #: ../../source/fsm/welcome.rst:8
 msgid ""
 "This is a code driven FSM (Finate State Machine) solution for your Unity "
 "project."
 msgstr ""
+"Esta é uma solução de FSM (Finite State Machine, ou, Máquina de estados Finita) baseada em código para "
+"seu projeto Unity."
 
 #: ../../source/fsm/welcome.rst:11
 msgid "What is a Finite State Machine?"
-msgstr ""
+msgstr "O que é uma Máquina de Estados Finita?"
 
 #: ../../source/fsm/welcome.rst:13
 msgid ""
 "A Finate State Machine is a design pattern focused on dealing with "
 "entities that have multiple possible states."
 msgstr ""
+"A Máquina de Estados Finita é um padrão de projeto focado em lidar com entidades que possuem vários estados possíveis."
 
 #: ../../source/fsm/welcome.rst:16
 msgid "Why this FSM?"
-msgstr ""
+msgstr "Porquê esta FSM?"
 
 #: ../../source/fsm/welcome.rst:18
 msgid ""
@@ -53,6 +56,10 @@ msgid ""
 "code by holding the actors actions logic inside its respective state (we "
 "will talk about actors in a bit)."
 msgstr ""
+"Embora saibamos que o Animator da Unity é uma Máquina de Estados, ele pode "
+"ficar confuso para se usar como um gerenciador de ações de um modo geral. Esta FSM "
+"lhe ajuda a organizar seu código mantendo a lógica das ações dos "
+"atores dentro do seu respectivo estado (vamos falar sobre atores em alguns instantes)."
 
 #: ../../source/fsm/welcome.rst:21
 msgid "Key pratical benefits of using this FSM:"

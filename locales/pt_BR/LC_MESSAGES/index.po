@@ -28,7 +28,7 @@ msgstr "Ferramentas Disponíveis"
 
 #: ../../source/index.rst:7
 msgid "IndieGabo's Handy Tools!"
-msgstr ""
+msgstr "Handy Tools do IndieGabo!"
 
 #: ../../source/index.rst:9
 msgid "Welcome to IndieGabo's Handy Tools! Hurray!"
@@ -44,7 +44,7 @@ msgstr ":ref:`Veja como instalar <installation-page>`."
 
 #: ../../source/index.rst:17
 msgid "Contribute"
-msgstr "Contrbua"
+msgstr "Contribua"
 
 #: ../../source/index.rst:19
 msgid "Donate something <3"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../source/index.rst:-1
 msgid "Gabinho Waving"
-msgstr ""
+msgstr "Gabinho Acenando"
 
 #~ msgid "Gabinho Acenando"
 #~ msgstr ""
