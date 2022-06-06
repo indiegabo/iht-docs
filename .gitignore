@@ -6,4 +6,4 @@
 # Build folders of sphinx documentation
 **/[Bb]uilding/*
 
-/docs/.nojekyll
+*.nojekyll
