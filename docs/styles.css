@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+* {
+  scrollbar-width: none;
+}
+
+body {
+  --top-bar-height: 80px;
+  --purple-bg-color: #260038;
+  --pink-color: #ff309a;
+  --blue-color: #1ee4f9;
+  margin: 0;
+  color: white;
+  background: var(--purple-bg-color);
+  --text-highlight-color: #2ab3e7; /* The  first gradient color */
+  --text-gradient-color-a: #2ab3e7; /* The  first gradient color */
+  --text-gradient-color-b: #ad69f1; /* The  second gradient color */
+  font-family: 'Signika Negative', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-sizing:border-box;
+}
+
+
+.gabo-container {
+  position: relative;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  margin-bottom: 3rem !important;
+
+  @media (min-width: $x-large-desktop) {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+.gabo-picture {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  animation: shadow-flow 15s ease-in-out infinite;
+
+  @media (min-width: $x-large-desktop) {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+.gabo-tag {
+  position: absolute;
+  width: 24vh;
+  bottom: -3vh;
+  left: 50%;
+  margin-left: -12vh;
+}
+
+
+.title-container {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+}
+
+.title, .subtitle {
+  text-align: center;
+}
+
+.title {
+  font-size: 5vh;
+  font-weight: 700;
+}
+
+.title-gradient {
+  background-size: 300%;
+  background-image: linear-gradient(
+    -60deg,
+    var(--text-gradient-color-a),
+    var(--pink-color),
+    #fff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-flow 30s ease-in-out infinite;
+}
+
+.links-container {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;  
+}
+
+@media only screen and (max-width: 600px) {    
+  .links-container {
+    flex-direction: column;
+  }
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  padding: 2rem;
+  background-color: #6d1f93;
+  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  border-radius: 10px;
+}
+
+.link img {
+  width: 6vh;
+}
+
+.link-title {
+  font-size: 4vh;
+  line-height: 4.2vh;
+  transition: all 400ms;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+
+  @media (min-width: $x-large-desktop) {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+}
+
+.link:hover .link-title {
+  color: var(--pink-color);
+  text-shadow: -1px -1px 2px #c72e58;
+}
+
+::selection {
+  color: #ff3099;
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+
+@keyframes shadow-flow {
+  0% {
+    box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+      -5px 0 5px var(--text-gradient-color-a);
+  }
+  50% {
+    box-shadow: 0 0 30px #c57bff, -7px 0 7px var(--text-gradient-color-a),
+      7px 0 7px var(--text-gradient-color-b);
+  }
+  100% {
+    box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+      -5px 0 5px var(--text-gradient-color-a);
+  }
+}
+
+
+
+@keyframes text-flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@-webkit-keyframes text-flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
