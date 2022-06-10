@@ -19,7 +19,6 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
@@ -107,13 +106,13 @@
            <div itemprop="articleBody">
              
   <section id="creating-states-for-an-actor">
-<span id="creating-states-for-an-actor-page"></span><h1>Creating States for an Actor<a class="headerlink" href="#creating-states-for-an-actor" title="Permalink to this heading"></a></h1>
+<span id="creating-states-for-an-actor-page"></span><h1>Creating States for an Actor<a class="headerlink" href="#creating-states-for-an-actor" title="Permalink to this headline"></a></h1>
 <section id="what-is-a-state">
-<h2>What is a state?<a class="headerlink" href="#what-is-a-state" title="Permalink to this heading"></a></h2>
+<h2>What is a state?<a class="headerlink" href="#what-is-a-state" title="Permalink to this headline"></a></h2>
 <p>A state represents a specific group of actions that should be performed while an actor’s specific condition is met.</p>
 </section>
 <section id="the-usage-strategy">
-<h2>The usage strategy<a class="headerlink" href="#the-usage-strategy" title="Permalink to this heading"></a></h2>
+<h2>The usage strategy<a class="headerlink" href="#the-usage-strategy" title="Permalink to this headline"></a></h2>
 <p>After being correctly crafted, a <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script should be attached to the same GameObject as the
 <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a>. The machine will then automatically recognize it and use it as it should.</p>
 <p>Also, the <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> class, as the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> class, is abstract. It is so because a state is specific for an specific actor.
@@ -125,7 +124,7 @@ Being that way, it does not make any sense to a state to exist without knowing i
 </div>
 </section>
 <section id="the-code">
-<h2>The code<a class="headerlink" href="#the-code" title="Permalink to this heading"></a></h2>
+<h2>The code<a class="headerlink" href="#the-code" title="Permalink to this headline"></a></h2>
 <p>Below is the base code for a successful state. Take a look at it and feel free to copy and use it as you wish.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Collections</span><span class="p">;</span><span class="w"></span>
@@ -182,17 +181,17 @@ Being that way, it does not make any sense to a state to exist without knowing i
 you will use inside your state.</p>
 </section>
 <section id="onload">
-<h2>OnLoad()<a class="headerlink" href="#onload" title="Permalink to this heading"></a></h2>
+<h2>OnLoad()<a class="headerlink" href="#onload" title="Permalink to this headline"></a></h2>
 <p>This method represents the moment a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> loads this <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script into its handled states. So it is inside
 the <code class="docutils literal notranslate"><span class="pre">State.OnLoad()</span></code> that you should put any logic regardind initialization <strong>before</strong> the machine starts running.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
-<span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Falling</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Falling</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velocity</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnLoad</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">   </span><span class="c1">// Register transitions and stuff</span>
-<span class="w">   </span><span class="n">AddTransition</span><span class="p">(</span><span class="n">Falling</span><span class="p">(),</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">FallingState</span><span class="p">&gt;());</span><span class="w"></span>
+<span class="w">   </span><span class="n">AddTransition</span><span class="p">(</span><span class="n">Falling</span><span class="p">,</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">FallingState</span><span class="p">&gt;());</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
 <span class="c1">// Some other code</span>
@@ -203,7 +202,7 @@ the <code class="docutils literal notranslate"><span class="pre">State.OnLoad()<
 <p>This method is called only once in the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> life cycle.</p>
 </section>
 <section id="onenter">
-<h2>OnEnter()<a class="headerlink" href="#onenter" title="Permalink to this heading"></a></h2>
+<h2>OnEnter()<a class="headerlink" href="#onenter" title="Permalink to this headline"></a></h2>
 <p>This method is called the <strong>exact moment</strong> a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> sets this <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script as its current state.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
 
@@ -218,7 +217,7 @@ the <code class="docutils literal notranslate"><span class="pre">State.OnLoad()<
 <p>The <code class="docutils literal notranslate"><span class="pre">State.OnEnter()</span></code> is perfect for start playing animations, initializing variables, properties and etc.</p>
 </section>
 <section id="onexit">
-<h2>OnExit()<a class="headerlink" href="#onexit" title="Permalink to this heading"></a></h2>
+<h2>OnExit()<a class="headerlink" href="#onexit" title="Permalink to this headline"></a></h2>
 <p>This method is called <strong>right before</strong> a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> wich has this <a class="reference internal" href="../api/state.html#state-class"><span class="std std-ref">State</span></a> script as its current state, transition into another
 state.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code</span>
@@ -234,7 +233,7 @@ state.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">State.OnExit()</span></code> is perfect place to stop animations and reset variables, properties and etc.</p>
 </section>
 <section id="tickers">
-<h2>Tickers<a class="headerlink" href="#tickers" title="Permalink to this heading"></a></h2>
+<h2>Tickers<a class="headerlink" href="#tickers" title="Permalink to this headline"></a></h2>
 <p>Once a State is defined as current state by the machine, its “Ticker methods” will be called at each
 time its actor “frame handlers” are executed.</p>
 <p>They are:</p>
@@ -279,7 +278,7 @@ time its actor “frame handlers” are executed.</p>
 <p>Refer to the <a class="reference internal" href="using-the-state-machine.html#lifecycle"><span class="std std-ref">IndieGabo’s FSM Life Cycle</span></a> for visual information about Tickers being called.</p>
 </section>
 <section id="transitioning-between-states">
-<span id="id3"></span><h2>Transitioning Between States<a class="headerlink" href="#transitioning-between-states" title="Permalink to this heading"></a></h2>
+<span id="id3"></span><h2>Transitioning Between States<a class="headerlink" href="#transitioning-between-states" title="Permalink to this headline"></a></h2>
 <p>There are two ways for a state to transition into another state:</p>
 <ol class="arabic simple">
 <li><p>By calling the Machine’s <code class="docutils literal notranslate"><span class="pre">ChangeState()</span></code> method.</p></li>
@@ -313,19 +312,19 @@ considering given priorities. If so, it will automatically transition into the t
 <p>A <a class="reference internal" href="../api/state-transition.html#state-transition-class"><span class="std std-ref">StateTransition</span></a> consists in a <code class="docutils literal notranslate"><span class="pre">Condition</span></code>, a target <code class="docutils literal notranslate"><span class="pre">State</span></code> and a <code class="docutils literal notranslate"><span class="pre">priotity</span></code> level. But there is no need for
 you to instantiate it. Just call the <code class="docutils literal notranslate"><span class="pre">State.AddTransition()</span></code> method and pass the those 3 arguments. I take care of the rest for you. Here is how
 you use it:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Condition</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">anotherThing</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Condition</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">anotherThing</span><span class="p">;</span><span class="w"></span>
 <span class="n">State</span><span class="w"> </span><span class="n">someState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SomeState</span><span class="p">&gt;();</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">AddTransition</span><span class="p">(</span><span class="n">Condition</span><span class="p">(),</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span><span class="w"></span>
+<span class="n">AddTransition</span><span class="p">(</span><span class="n">Condition</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>But, if you somehow prefer, here is how a StateTransition is instantiated and registered:</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Condition</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">anotherThing</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Condition</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="n">anotherThing</span><span class="p">;</span><span class="w"></span>
 <span class="n">State</span><span class="w"> </span><span class="n">someState</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">SomeState</span><span class="p">&gt;();</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">StateTransition</span><span class="w"> </span><span class="n">transition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StateTransition</span><span class="p">(</span><span class="n">Condition</span><span class="p">(),</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span><span class="w"></span>
+<span class="n">StateTransition</span><span class="w"> </span><span class="n">transition</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StateTransition</span><span class="p">(</span><span class="n">Condition</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">priority</span><span class="p">);</span><span class="w"></span>
 <span class="n">AddTransition</span><span class="p">(</span><span class="n">transition</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
@@ -341,16 +340,16 @@ otherwise it will be read as the declaration order. The default priority value i
 
 <span class="c1">// Example of conditions using delegate functions and recurring to lambda functions</span>
 <span class="c1">// IMPORTANT!! It MUST be a delegate function. Check the docs for further understanding</span>
-<span class="k">protected</span><span class="w"> </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Idle</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velociy</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Here we take advantage on lambda functions so we do not need to declare a method.</span>
-<span class="k">protected</span><span class="w"> </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Moving</span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velociy</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">protected</span><span class="w"> </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Idle</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velociy</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Here we take advantage on lambda functions so we do not need to declare a method.</span>
+<span class="k">protected</span><span class="w"> </span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span><span class="w"> </span><span class="n">Moving</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="n">actor</span><span class="p">.</span><span class="n">rigidBody2D</span><span class="p">.</span><span class="n">velociy</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="p">!=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
 
 <span class="c1">// Called to set the state able to be used by the Machine.</span>
 <span class="c1">// Usually where you should register state transitions.</span>
 <span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnLoad</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Example of how to add transitions</span>
-<span class="w">    </span><span class="n">AddTransition</span><span class="p">(</span><span class="n">Idle</span><span class="p">(),</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MovingState</span><span class="p">&gt;());</span><span class="w"> </span><span class="c1">// No priority means priority = 0</span>
-<span class="w">    </span><span class="n">AddTransition</span><span class="p">(</span><span class="n">Moving</span><span class="p">(),</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MovingState</span><span class="p">&gt;(),</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Setting higher priority on third argument for this one. It will be executed before.</span>
+<span class="w">    </span><span class="n">AddTransition</span><span class="p">(</span><span class="n">Idle</span><span class="p">,</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MovingState</span><span class="p">&gt;());</span><span class="w"> </span><span class="c1">// No priority means priority = 0</span>
+<span class="w">    </span><span class="n">AddTransition</span><span class="p">(</span><span class="n">Moving</span><span class="p">,</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">MovingState</span><span class="p">&gt;(),</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Setting higher priority on third argument for this one. It will be executed before.</span>
 <span class="p">}</span><span class="w"></span>
 
 <span class="c1">// Some other code</span>
@@ -363,7 +362,7 @@ otherwise it will be read as the declaration order. The default priority value i
 </div>
 </section>
 <section id="the-inspector">
-<h2>The inspector<a class="headerlink" href="#the-inspector" title="Permalink to this heading"></a></h2>
+<h2>The inspector<a class="headerlink" href="#the-inspector" title="Permalink to this headline"></a></h2>
 <p>For a simple state, a simple name. Just that. You can set a Name for your state using Unity’s inspector so you get some better visual feedback
 when taking a look at the state machine.</p>
 <p>Set a name:</p>

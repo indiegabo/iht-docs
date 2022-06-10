@@ -19,7 +19,6 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
@@ -104,15 +103,15 @@
            <div itemprop="articleBody">
              
   <section id="using-the-state-machine">
-<span id="using-the-state-machine-class"></span><h1>Usando a Máquina de estados<a class="headerlink" href="#using-the-state-machine" title="Link permanente para este cabeçalho"></a></h1>
+<span id="using-the-state-machine-class"></span><h1>Usando a Máquina de estados<a class="headerlink" href="#using-the-state-machine" title="Link permanente para este título"></a></h1>
 <section id="behold-the-state-machine">
-<h2>Contemple: A MÁQUINA DE ESTADOS!!!<a class="headerlink" href="#behold-the-state-machine" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Contemple: A MÁQUINA DE ESTADOS!!!<a class="headerlink" href="#behold-the-state-machine" title="Link permanente para este título"></a></h2>
 <p>Agora que sabemos como <a class="reference internal" href="setting-up-an-actor.html#setting-up-an-actor-page"><span class="std std-ref">configurar um ator</span></a> e como <a class="reference internal" href="creating-states-for-an-actor.html#creating-states-for-an-actor-page"><span class="std std-ref">criar seus estados</span></a> podemos finalmente usar a Máquina de estados.</p>
 <p>O componente <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a>, diferente dos atores e estados, é um componente pronto para uso. Então você não precisa se preocupar com criar scripts para user ele. Basta anexa-lo a um GameObject, anexar estados ao mesmo GameObject, definir um estado padrão e tudo certo!</p>
 <p>But, if you want to understand a little about it… Let’s do it!</p>
 </section>
 <section id="life-cycle">
-<span id="lifecycle"></span><h2>Ciclo de vida<a class="headerlink" href="#life-cycle" title="Link permanente para este cabeçalho"></a></h2>
+<span id="lifecycle"></span><h2>Ciclo de vida<a class="headerlink" href="#life-cycle" title="Link permanente para este título"></a></h2>
 <p>Vamos dar uma olhada no ciclo de vida da Máquina de estados:</p>
 <a class="reference internal image-reference" href="../../_images/life-cycle.jpg"><img alt="Criando script de ator a partir do menu" src="../../_images/life-cycle.jpg" style="width: 600px;" /></a>
 <div class="admonition note">
@@ -137,7 +136,7 @@
 </ol>
 </section>
 <section id="tickers-methods-and-machine-statuses">
-<h2>Métodos Tickers e os status da Máquina<a class="headerlink" href="#tickers-methods-and-machine-statuses" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Métodos Tickers e os status da Máquina<a class="headerlink" href="#tickers-methods-and-machine-statuses" title="Link permanente para este título"></a></h2>
 <p>Uma vez que a máquina está ligada, significando que o <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> é <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code>, ela irá chamar os Tickers do <code class="docutils literal notranslate"><span class="pre">StateMachine.currentState</span></code> de acordo com os “Frame Handlers” do ator. Enquanto o <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> for <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code>, ela irá proceder desta forma.</p>
 <p>Se em qualquer momento você precisar pausar este comportamento, você pode chamar <code class="docutils literal notranslate"><span class="pre">StateMachine.Pause()</span></code> e o <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> será definido como <code class="docutils literal notranslate"><span class="pre">MachineStatus.Paused</span></code>. Desta forma, nenhum dos Tickers será passado para o <code class="docutils literal notranslate"><span class="pre">StateMachine.currentState</span></code>, portanto, podemos considerar que a máquina está pausada.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Some other code from inside a state</span>
@@ -163,7 +162,7 @@
 </div>
 </section>
 <section id="setting-up-the-machine">
-<h2>Configurando a máquina<a class="headerlink" href="#setting-up-the-machine" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Configurando a máquina<a class="headerlink" href="#setting-up-the-machine" title="Link permanente para este título"></a></h2>
 <p>Você pode simplesmente criar um GameObject e anexar o <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> componente dentro dele. Isto também vale para o <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a>. Veja:</p>
 <video width="800" height="450" loop autoplay muted controls>
    <source src="../../_static/videos/setting-state-machine-single-object.mp4" type="video/mp4">
@@ -180,7 +179,7 @@
 <p>Como observamos, eu preparei um item de menu para você para colocar uma nova máquina de estado em sua hierarquia. Mas se você desejar anexar o componente <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> em qualquer GameObject, você pode procurar por ele usando o botão “Add Component” do inspetor.</p>
 </section>
 <section id="all-set">
-<h2>Tudo pronto!<a class="headerlink" href="#all-set" title="Link permanente para este cabeçalho"></a></h2>
+<h2>Tudo pronto!<a class="headerlink" href="#all-set" title="Link permanente para este título"></a></h2>
 <p>Confira a documentação da API se você quiser saber mais sobre essas classes. Por enquanto, eu acho que você tem tudo o que precisa para começar a beneficiar da máquina de estados!</p>
 <p>Boaaaa!! Agora é só fazer algo maravilhoso. Não esquece de me avisar!!!</p>
 <div style="clear: both;" ></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Acenando" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>

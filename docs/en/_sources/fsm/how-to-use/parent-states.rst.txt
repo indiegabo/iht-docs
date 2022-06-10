@@ -19,22 +19,22 @@ First, create a parent state:
 
       public class GroundedState : State
       {
-         Func<bool> Idle() => actor.grounded && actor.rigidBody2D.velocity.x == 0;
-         Func<bool> Moving() => actor.grounded && actor.rigidBody2D.velocity.x != 0;
-         Func<bool> Ascending() => actor.rigidBody.velocity.y > 0;
-         Func<bool> Descending() => actor.rigidBody.velocity.y < 0;
+         Func<bool> Idle => actor.grounded && actor.rigidBody2D.velocity.x == 0;
+         Func<bool> Moving => actor.grounded && actor.rigidBody2D.velocity.x != 0;
+         Func<bool> Ascending => actor.rigidBody.velocity.y > 0;
+         Func<bool> Descending => actor.rigidBody.velocity.y < 0;
 
          public virtual void OnLoad() // In case child needs to override this we set as virtual
          {
-            AddTransition(Idle(), GetComponent<IdleState>());
-            AddTransition(Moving(), GetComponent<MovingState>());
+            AddTransition(Idle, GetComponent<IdleState>());
+            AddTransition(Moving, GetComponent<MovingState>());
             
             // Priority 1 because we want this to be evaluated before Idle and Moving. 
             // Meaning that if we detect velocity on Y axis, we do not care about grounding.
             // The transition should occur.
             // Just an example btw.
-            AddTransition(Ascending(), GetComponent<AscendingState>(), 1); 
-            AddTransition(Descending(), GetComponent<DescendingState>(), 1);
+            AddTransition(Ascending, GetComponent<AscendingState>(), 1); 
+            AddTransition(Descending, GetComponent<DescendingState>(), 1);
             
          }
       }
@@ -57,13 +57,13 @@ But say you need to register new transitions for your child state:
 
       public class IdleState : GroundedState
       {
-         Func<bool> NewCondition() => actor.something > actor.anotherThing;
+         Func<bool> NewCondition => actor.something > actor.anotherThing;
 
          public override void OnLoad() // Overriding since the parent already implements this
          {
             base.OnLoad(); // This is important so parent transtions get loaded
             
-            AddTransition(NewCondition(), GetComponent<OtherState>());            
+            AddTransition(NewCondition, GetComponent<OtherState>());            
          }
       }
 
