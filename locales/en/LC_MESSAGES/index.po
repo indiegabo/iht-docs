@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IndieGabo's Handy Tools \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-05 00:49-0300\n"
+"POT-Creation-Date: 2022-06-09 22:06-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.1\n"
 
-#: ../../source/index.rst:48
+#: ../../source/index.rst:32
 msgid "First Steps"
 msgstr ""
 
-#: ../../source/index.rst:55
+#: ../../source/index.rst:38
 msgid "Available Features"
 msgstr ""
 
@@ -31,50 +31,50 @@ msgid "IndieGabo's Handy Tools!"
 msgstr ""
 
 #: ../../source/index.rst:9
-msgid "Welcome to IndieGabo's Handy Tools! Hurray!"
+msgid "Welcome to IndieGabo's Handy Tools documentation! Hurray!"
 msgstr ""
 
 #: ../../source/index.rst:12
-msgid "Installation"
+msgid "About this project"
 msgstr ""
 
 #: ../../source/index.rst:14
-msgid ":ref:`Check out how to install it <installation-page>`."
+msgid ""
+"This is a collection of handy tools for Unity Game developers. Specially "
+"2D driven ones."
 msgstr ""
 
-#: ../../source/index.rst:17
-msgid "Contribute"
+#: ../../source/index.rst:16
+msgid ""
+"My goal is to make easy to use and iterative components so you can either"
+" use them as they are or use them as a start point to creating something "
+"awesome for your game."
 msgstr ""
 
-#: ../../source/index.rst:19
-msgid "Donate something <3"
+#: ../../source/index.rst:20
+msgid "Current Version"
 msgstr ""
 
 #: ../../source/index.rst:22
-msgid "Where to Find IndieGabo"
+msgid "b-0.0.1"
 msgstr ""
 
 #: ../../source/index.rst:24
-msgid "Site"
-msgstr ""
-
-#: ../../source/index.rst:25
-msgid "GitHub"
-msgstr ""
-
-#: ../../source/index.rst:26
-msgid "Youtube"
-msgstr ""
-
-#: ../../source/index.rst:27
-msgid "Twitch"
+msgid ""
+"This is a beta test version. I am currently working on a "
+"CharacterController2D and i believe that as soon as it is finished, we "
+"can call the package stable enough to get an 1.0.0 version."
 msgstr ""
 
 #: ../../source/index.rst:28
-msgid "Instagram"
+msgid "Contribute"
 msgstr ""
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:30
+msgid "Donate something <3"
+msgstr ""
+
+#: ../../source/index.rst:46
 msgid ""
 "This package uses ``NaughtyAttributes`` in order to keep its inspector "
 "more pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You "
@@ -82,7 +82,46 @@ msgid ""
 "/na-docs/>`_ ."
 msgstr ""
 
+#: ../../source/index.rst:50
+msgid "Where to Find IndieGabo"
+msgstr ""
+
+#: ../../source/index.rst:52
+msgid "Site"
+msgstr ""
+
+#: ../../source/index.rst:53
+msgid "GitHub"
+msgstr ""
+
+#: ../../source/index.rst:54
+msgid "Youtube"
+msgstr ""
+
+#: ../../source/index.rst:55
+msgid "Twitch"
+msgstr ""
+
+#: ../../source/index.rst:56
+msgid "Instagram"
+msgstr ""
+
 #: ../../source/index.rst:-1
 msgid "Gabinho Waving"
 msgstr ""
+
+#~ msgid "Welcome to IndieGabo's Handy Tools! Hurray!"
+#~ msgstr ""
+
+#~ msgid "Version"
+#~ msgstr ""
+
+#~ msgid "b0.0.1"
+#~ msgstr ""
+
+#~ msgid "Installation"
+#~ msgstr ""
+
+#~ msgid ":ref:`Check out how to install it <installation-page>`."
+#~ msgstr ""
 

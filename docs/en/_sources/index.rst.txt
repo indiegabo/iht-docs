@@ -6,17 +6,45 @@
 IndieGabo's Handy Tools!
 ========================
 
-Welcome to IndieGabo's Handy Tools! Hurray!
+Welcome to IndieGabo's Handy Tools documentation! Hurray!
 
-Installation
-------------
+About this project
+------------------
 
-:ref:`Check out how to install it <installation-page>`.
+This is a collection of handy tools for Unity Game developers. Specially 2D driven ones.
+
+My goal is to make easy to use and iterative components so you can either use them as they are 
+or use them as a start point to creating something awesome for your game.
+
+Current Version
+---------------
+
+   * b-0.0.1
+
+This is a beta test version. I am currently working on a CharacterController2D and i believe that as soon as it is finished, we can call
+the package stable enough to get an 1.0.0 version.
 
 Contribute
 ----------
 
 Donate something <3
+
+.. toctree::
+   :maxdepth: 1
+   :caption: First Steps
+
+   first-steps/installation
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Available Features
+
+   fsm/welcome
+   character-controller-2d/welcome
+
+.. note::
+    This package uses ``NaughtyAttributes`` in order to keep its inspector more pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You can check it out
+    on `NaughtyAttributes Github <https://dbrizov.github.io/na-docs/>`_ .
 
 Where to Find IndieGabo
 -----------------------
@@ -26,11 +54,6 @@ Where to Find IndieGabo
 * Youtube
 * Twitch
 * Instagram
-
-
-.. note::
-    This package uses ``NaughtyAttributes`` in order to keep its inspector more pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You can check it out
-    on `NaughtyAttributes Github <https://dbrizov.github.io/na-docs/>`_ .
 
 |
 
@@ -44,22 +67,6 @@ Where to Find IndieGabo
    :width: 80
 
 |
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: First Steps
-
-   first-steps/installation
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Available Features
-
-   fsm/welcome
-   character-controller-2d/welcome
-
 
 .. HTML Substiuions
 
