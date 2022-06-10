@@ -99,12 +99,12 @@ the ``State.OnLoad()`` that you should put any logic regardind initialization **
 
       // Some other code
 
-      Func<bool> Falling() => () => actor.rigidBody2D.velocity.y < 0;
+      Func<bool> Falling => () => actor.rigidBody2D.velocity.y < 0;
 
       public void OnLoad()
       {
          // Register transitions and stuff
-         AddTransition(Falling(), GetComponent<FallingState>());
+         AddTransition(Falling, GetComponent<FallingState>());
       }
 
       // Some other code
@@ -241,21 +241,21 @@ you use it:
 
 .. code-block:: csharp
 
-   Func<bool> Condition() => () => something > anotherThing;
+   Func<bool> Condition => () => something > anotherThing;
    State someState = GetComponent<SomeState>();
    int priority = 1;
    
-   AddTransition(Condition(), target, priority);
+   AddTransition(Condition, someState, priority);
 
 But, if you somehow prefer, here is how a StateTransition is instantiated and registered:
 
 .. code-block:: csharp
 
-   Func<bool> Condition() => () => something > anotherThing;
+   Func<bool> Condition => () => something > anotherThing;
    State someState = GetComponent<SomeState>();
    int priority = 1;
    
-   StateTransition transition = new StateTransition(Condition(), target, priority);
+   StateTransition transition = new StateTransition(Condition, someState, priority);
    AddTransition(transition);
 
 Note that to declare a ``Condition`` you **MUST** approach using a 
@@ -275,16 +275,16 @@ otherwise it will be read as the declaration order. The default priority value i
 
     // Example of conditions using delegate functions and recurring to lambda functions
     // IMPORTANT!! It MUST be a delegate function. Check the docs for further understanding
-    protected Func<bool> Idle() => () => actor.rigidBody2D.velociy.x == 0; // Here we take advantage on lambda functions so we do not need to declare a method.
-    protected Func<bool> Moving() => () => actor.rigidBody2D.velociy.x != 0;
+    protected Func<bool> Idle => () => actor.rigidBody2D.velociy.x == 0; // Here we take advantage on lambda functions so we do not need to declare a method.
+    protected Func<bool> Moving => () => actor.rigidBody2D.velociy.x != 0;
 
     // Called to set the state able to be used by the Machine.
     // Usually where you should register state transitions.
     public void OnLoad()
     {
         // Example of how to add transitions 
-        AddTransition(Idle(), GetComponent<MovingState>()); // No priority means priority = 0
-        AddTransition(Moving(), GetComponent<MovingState>(), 1); // Setting higher priority on third argument for this one. It will be executed before.
+        AddTransition(Idle, GetComponent<MovingState>()); // No priority means priority = 0
+        AddTransition(Moving, GetComponent<MovingState>(), 1); // Setting higher priority on third argument for this one. It will be executed before.
     } 
 
     // Some other code

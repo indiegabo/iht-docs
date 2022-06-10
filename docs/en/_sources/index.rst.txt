@@ -24,10 +24,18 @@ Current Version
 This is a beta test version. I am currently working on a CharacterController2D and i believe that as soon as it is finished, we can call
 the package stable enough to get an 1.0.0 version.
 
+Currently Working On
+--------------------
+
+I am currently working on the :ref:`CharacterController2D <welcome-character-controller-2d-page>`.
+Finishing some movement stuff like crounching and ledge grabing and looking forward to add some attacks into it.  
+
 Contribute
 ----------
 
-Donate something <3
+If you want to contribute to this project, get in touch by any of my socials listed below.
+
+Do not forget to at least consider joining my patreon. bla bla bla patreon stuff. 
 
 .. toctree::
    :maxdepth: 1
@@ -49,11 +57,10 @@ Donate something <3
 Where to Find IndieGabo
 -----------------------
 
-* Site
-* GitHub
-* Youtube
-* Twitch
-* Instagram
+* Checkout this and other projects on my `Github page <https://github.com/indiegabo/>`_ .
+* I use my `Youtube channel <https://youtube.com/c/indiegabooficial/>`_ to post tutorials and insights.
+* You can hang out with me on my `Twitch Channel <https://twitch.tv/indiegabo>`_.
+* Follow me on my Instagram `@indiegabo <https://instagram.com/indiegabo>`_ to get in touch with me on daily basis.
 
 |
 

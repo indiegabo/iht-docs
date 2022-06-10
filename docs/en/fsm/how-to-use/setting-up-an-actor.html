@@ -19,7 +19,6 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
@@ -102,9 +101,9 @@
            <div itemprop="articleBody">
              
   <section id="setting-up-an-actor">
-<span id="setting-up-an-actor-page"></span><h1>Setting up an Actor<a class="headerlink" href="#setting-up-an-actor" title="Permalink to this heading"></a></h1>
+<span id="setting-up-an-actor-page"></span><h1>Setting up an Actor<a class="headerlink" href="#setting-up-an-actor" title="Permalink to this headline"></a></h1>
 <section id="what-is-an-actor">
-<h2>What is an Actor?<a class="headerlink" href="#what-is-an-actor" title="Permalink to this heading"></a></h2>
+<h2>What is an Actor?<a class="headerlink" href="#what-is-an-actor" title="Permalink to this headline"></a></h2>
 <p>Anything that performs several actions and therefore will benefit from an <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> handling its states of action, fits the concept of an actor for us.</p>
 <p>That being said, the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> class exists to be the gateway between the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> and any
 other components wich handle anything for the Actor. Even the actor’s own stuff.</p>
@@ -124,21 +123,21 @@ have references within the actor’s script, and therefore any of the actor’s 
 classes wich inherit from the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> class.</p>
 </section>
 <section id="how-it-works">
-<h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this heading"></a></h2>
+<h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline"></a></h2>
 <p>At its <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Awake()</span></code> the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> will try finding a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> component among either its own GameObject
 or its children GameObjects.</p>
 <p>From there on the Machine will auto regulate the actor’s states evaluating if it needs transitioning into another state on each of the actor’s
 <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Update()</span></code> <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.FixedUpdate()</span></code> and <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.LateUpdate()</span></code> methods execution.</p>
 </section>
 <section id="monobehaviour-tickers">
-<h2>MonoBehaviour Tickers<a class="headerlink" href="#monobehaviour-tickers" title="Permalink to this heading"></a></h2>
+<h2>MonoBehaviour Tickers<a class="headerlink" href="#monobehaviour-tickers" title="Permalink to this headline"></a></h2>
 <p>At each of the Actor’s MonoBehaviour “frame handlers” it will call the Machine’s corresponding ticker. The machine
 will then call its current state corresponding Ticker method.</p>
 <p>This means that all states will be synced with the actor’s MonoBehaviour methods. Therefore we can say all action’s
 execution are isolated inside the state respecting the actor’s pacing.</p>
 </section>
 <section id="the-code">
-<h2>The Code<a class="headerlink" href="#the-code" title="Permalink to this heading"></a></h2>
+<h2>The Code<a class="headerlink" href="#the-code" title="Permalink to this headline"></a></h2>
 <p>Below is a good start for creating an <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> script of your own. Feel free to copy:</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
