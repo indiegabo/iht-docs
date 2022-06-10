@@ -14,7 +14,7 @@ About this project
 This is a collection of handy tools for Unity Game developers. Specially 2D driven ones.
 
 My goal is to make easy to use and iterative components so you can either use them as they are 
-or use them as a start point to creating something awesome for your game.
+or have a starting point to create something awesome for your game.
 
 Current Version
 ---------------
@@ -60,7 +60,7 @@ Where to Find IndieGabo
 * Checkout this and other projects on my `Github page <https://github.com/indiegabo/>`_ .
 * I use my `Youtube channel <https://youtube.com/c/indiegabooficial/>`_ to post tutorials and insights.
 * You can hang out with me on my `Twitch Channel <https://twitch.tv/indiegabo>`_.
-* Follow me on my Instagram `@indiegabo <https://instagram.com/indiegabo>`_ to get in touch with me on daily basis.
+* Follow me `@indiegabo <https://instagram.com/indiegabo>`_ on my Instagram to get in touch with me on daily basis.
 
 |
 
