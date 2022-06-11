@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IndieGabo's Handy Tools \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-09 22:06-0300\n"
+"POT-Creation-Date: 2022-06-11 15:56-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.1\n"
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:79
 msgid "First Steps"
 msgstr ""
 
-#: ../../source/index.rst:38
+#: ../../source/index.rst:85
 msgid "Available Features"
 msgstr ""
 
@@ -31,7 +31,7 @@ msgid "IndieGabo's Handy Tools!"
 msgstr ""
 
 #: ../../source/index.rst:9
-msgid "Welcome to IndieGabo's Handy Tools documentation! Hurray!"
+msgid "Welcome to IndieGabo's Handy Tools documentation! Hurray! \\\\o/"
 msgstr ""
 
 #: ../../source/index.rst:12
@@ -47,7 +47,7 @@ msgstr ""
 #: ../../source/index.rst:16
 msgid ""
 "My goal is to make easy to use and iterative components so you can either"
-" use them as they are or use them as a start point to creating something "
+" use them as they are or have a starting point to create something "
 "awesome for your game."
 msgstr ""
 
@@ -67,14 +67,58 @@ msgid ""
 msgstr ""
 
 #: ../../source/index.rst:28
-msgid "Contribute"
+msgid "Currently Working On"
 msgstr ""
 
 #: ../../source/index.rst:30
-msgid "Donate something <3"
+msgid ""
+"I am currently working on the :ref:`CharacterController2D <welcome-"
+"character-controller-2d-page>`. Finishing some movement stuff like "
+"crounching and ledge grabing and looking forward to add some attacks into"
+" it."
 msgstr ""
 
-#: ../../source/index.rst:46
+#: ../../source/index.rst:34
+msgid "Itch Store"
+msgstr ""
+
+#: ../../source/index.rst:36
+msgid ""
+"I use these tools to build assets and distribute them on itch.io. It is a"
+" way for me to give something worth of your support so i can keep "
+"creating stuff. Feel free to browse my `itch page "
+"<https://indiegabo.itch.io>`_ and find something usefull to you there."
+msgstr ""
+
+#: ../../source/index.rst:39
+msgid "I try creating fuylly functional assets."
+msgstr ""
+
+#: ../../source/index.rst:42
+msgid "Contribute"
+msgstr ""
+
+#: ../../source/index.rst:44
+msgid ""
+"If you want to contribute to this project, get in touch by any of my "
+"socials listed below."
+msgstr ""
+
+#: ../../source/index.rst:50
+msgid ""
+"Do not forget to at least consider joining my `patreon "
+"<https://patreon.com/indiegabo>`_ to own assets i distribute in itch.io. "
+"In other words: you will be able to download my itch payed assets without"
+" having to spend any other money besides your patreon subscription."
+msgstr ""
+
+#: ../../source/index.rst:57
+msgid ""
+"Nevertheless, if somehow you just want to donate cause you find my work "
+"useful, click the button below:"
+msgstr ""
+
+#: ../../source/index.rst:93
 msgid ""
 "This package uses ``NaughtyAttributes`` in order to keep its inspector "
 "more pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You "
@@ -82,28 +126,32 @@ msgid ""
 "/na-docs/>`_ ."
 msgstr ""
 
-#: ../../source/index.rst:50
+#: ../../source/index.rst:97
 msgid "Where to Find IndieGabo"
 msgstr ""
 
-#: ../../source/index.rst:52
-msgid "Site"
+#: ../../source/index.rst:103
+msgid ""
+"Checkout this and other projects on my `Github page "
+"<https://github.com/indiegabo/>`_ ."
 msgstr ""
 
-#: ../../source/index.rst:53
-msgid "GitHub"
+#: ../../source/index.rst:113
+msgid ""
+"I use my `Youtube channel <https://youtube.com/c/indiegabooficial/>`_ to "
+"post tutorials and insights."
 msgstr ""
 
-#: ../../source/index.rst:54
-msgid "Youtube"
+#: ../../source/index.rst:123
+msgid ""
+"You can hang out with me while i stream on my `Twitch Channel "
+"<https://twitch.tv/indiegabo>`_."
 msgstr ""
 
-#: ../../source/index.rst:55
-msgid "Twitch"
-msgstr ""
-
-#: ../../source/index.rst:56
-msgid "Instagram"
+#: ../../source/index.rst:133
+msgid ""
+"Follow me `@indiegabo <https://instagram.com/indiegabo>`_ on my Instagram"
+" to get in touch with me on daily basis."
 msgstr ""
 
 #: ../../source/index.rst:-1
@@ -123,5 +171,46 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ":ref:`Check out how to install it <installation-page>`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "My goal is to make easy to "
+#~ "use and iterative components so you "
+#~ "can either use them as they are"
+#~ " or use them as a start point"
+#~ " to creating something awesome for "
+#~ "your game."
+#~ msgstr ""
+
+#~ msgid "Donate something <3"
+#~ msgstr ""
+
+#~ msgid "Site"
+#~ msgstr ""
+
+#~ msgid "GitHub"
+#~ msgstr ""
+
+#~ msgid "Youtube"
+#~ msgstr ""
+
+#~ msgid "Twitch"
+#~ msgstr ""
+
+#~ msgid "Instagram"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do not forget to at least consider"
+#~ " joining my `patreon "
+#~ "<https://patreon.com/indiegabo>`_ to own assets "
+#~ "i distribute in itch.io. In other "
+#~ "words: you will be able to "
+#~ "download my itch assets without having"
+#~ " to spend any other money besides "
+#~ "your patreon subscription."
+#~ msgstr ""
+
+#~ msgid "Welcome to IndieGabo's Handy Tools documentation! Hurray!"
 #~ msgstr ""
 

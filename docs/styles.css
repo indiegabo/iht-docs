@@ -191,6 +191,21 @@ a {
   }
 }
 
+@-webkit-keyframes shadow-flow {
+  0% {
+    box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+      -5px 0 5px var(--text-gradient-color-a);
+  }
+  50% {
+    box-shadow: 0 0 30px #c57bff, -7px 0 7px var(--text-gradient-color-a),
+      7px 0 7px var(--text-gradient-color-b);
+  }
+  100% {
+    box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+      -5px 0 5px var(--text-gradient-color-a);
+  }
+}
+
 
 
 @keyframes text-flow {

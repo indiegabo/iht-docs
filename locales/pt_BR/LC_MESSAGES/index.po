@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: IndieGabo's Handy Tools \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-09 22:06-0300\n"
+"POT-Creation-Date: 2022-06-11 15:56-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,43 +18,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.1\n"
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:79
 msgid "First Steps"
 msgstr "Primeiros Passos"
 
-#: ../../source/index.rst:38
+#: ../../source/index.rst:85
 msgid "Available Features"
 msgstr "Ferramentas Disponíveis"
 
 #: ../../source/index.rst:7
 msgid "IndieGabo's Handy Tools!"
-msgstr "Handy Tools do IndieGabo!"
+msgstr "Utilidades do IndieGabo!"
 
 #: ../../source/index.rst:9
-#, fuzzy
-msgid "Welcome to IndieGabo's Handy Tools documentation! Hurray!"
-msgstr "Boas vindas ao IndieGabo's Handy Tools"
+msgid "Welcome to IndieGabo's Handy Tools documentation! Hurray! \\\\o/"
+msgstr "Boas vindas à documentação das Utilidades do IndieGabo! Aeeeeeeee! \\o/"
 
 #: ../../source/index.rst:12
 msgid "About this project"
-msgstr ""
+msgstr "Sobre o projeto"
 
 #: ../../source/index.rst:14
 msgid ""
 "This is a collection of handy tools for Unity Game developers. Specially "
 "2D driven ones."
 msgstr ""
+"Esta é uma coleção de ferramentas úteis para desenvolvedores de jogos que"
+" usam a Unity. Principalmente para os desenvolvedores 2D."
 
 #: ../../source/index.rst:16
 msgid ""
 "My goal is to make easy to use and iterative components so you can either"
-" use them as they are or use them as a start point to creating something "
+" use them as they are or have a starting point to create something "
 "awesome for your game."
 msgstr ""
+"O meu objetivo é fazer ferramentas fáceis de usar e iterativas, para que "
+"você possa usá-las como estão ou ter um ponto de partida para criar algo "
+"maravilhoso para seu jogo."
 
 #: ../../source/index.rst:20
 msgid "Current Version"
-msgstr ""
+msgstr "Versão atual"
 
 #: ../../source/index.rst:22
 msgid "b-0.0.1"
@@ -66,16 +70,79 @@ msgid ""
 "CharacterController2D and i believe that as soon as it is finished, we "
 "can call the package stable enough to get an 1.0.0 version."
 msgstr ""
+"Esta é uma versão beta. Estou trabalhando no CharacterController2D e "
+"creio que assim que ele for finalizado, poderemos lançar um pacote com "
+"uma versão 1.0.0 estável."
 
 #: ../../source/index.rst:28
+msgid "Currently Working On"
+msgstr "O trampo atual"
+
+#: ../../source/index.rst:30
+msgid ""
+"I am currently working on the :ref:`CharacterController2D <welcome-"
+"character-controller-2d-page>`. Finishing some movement stuff like "
+"crounching and ledge grabing and looking forward to add some attacks into"
+" it."
+msgstr ""
+":ref:`CharacterController2D <welcome-character-controller-2d-page>`. "
+"Finalizando alguns aspectos de movimentação, como agachar e poder agarrar"
+" em quinas. O próximo passo vai ser adicionar algumas maneiras de atacar."
+
+#: ../../source/index.rst:34
+msgid "Itch Store"
+msgstr "Loja na Itch"
+
+#: ../../source/index.rst:36
+msgid ""
+"I use these tools to build assets and distribute them on itch.io. It is a"
+" way for me to give something worth of your support so i can keep "
+"creating stuff. Feel free to browse my `itch page "
+"<https://indiegabo.itch.io>`_ and find something usefull to you there."
+msgstr ""
+"Eu uso estas ferramentas para criar assets e distribuí-las no itch.io. É "
+"uma forma deu entregar algo que que faça o seu apoio valer a pena. Assim "
+"eu posso continuar criando coisas e sonhar. Sinta-se a vontade para "
+"navegar na minha `página da itch <https://indiegabo.itch.io>`_ e "
+"encontrar algo útil para você lá."
+
+#: ../../source/index.rst:39
+msgid "I try creating fuylly functional assets."
+msgstr "Eu tento criar assets completamente funcionais e fáceis de adapatar."
+
+#: ../../source/index.rst:42
 msgid "Contribute"
 msgstr "Contribua"
 
-#: ../../source/index.rst:30
-msgid "Donate something <3"
-msgstr "Se puder, doe algo <3"
+#: ../../source/index.rst:44
+msgid ""
+"If you want to contribute to this project, get in touch by any of my "
+"socials listed below."
+msgstr ""
+"Se você quiser contribuir com este projeto, entre em contato comigo em "
+"qualquer uma das minhas redes sociais listadas abaixo."
 
-#: ../../source/index.rst:46
+#: ../../source/index.rst:50
+msgid ""
+"Do not forget to at least consider joining my `patreon "
+"<https://patreon.com/indiegabo>`_ to own assets i distribute in itch.io. "
+"In other words: you will be able to download my itch payed assets without"
+" having to spend any other money besides your patreon subscription."
+msgstr ""
+"Não se esqueça de considerar se juntar ao meu `patreon "
+"<https://patreon.com/indiegabo>`_ para ter acesso aos assets pagos na "
+"itch.io. Em outras palavras: você poderá baixar os assets pagos da minha "
+"itch.io sem precisar gastar nada além da sua assinatura no patreon."
+
+#: ../../source/index.rst:57
+msgid ""
+"Nevertheless, if somehow you just want to donate cause you find my work "
+"useful, click the button below:"
+msgstr ""
+"No entanto, se você quiser apenas doar pois acha meu trabalho útil, "
+"clique no botão abaixo:"
+
+#: ../../source/index.rst:93
 msgid ""
 "This package uses ``NaughtyAttributes`` in order to keep its inspector "
 "more pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You "
@@ -83,33 +150,45 @@ msgid ""
 "/na-docs/>`_ ."
 msgstr ""
 "Esse pacote utiliza ``NaughtyAttributes`` para manter o inspetor mais "
-"amigável muito obrigado ``dbrizov`` por essa ferramenta maravilhosa. Você"
-" pode saber `Github do NaughtyAttributes <https://dbrizov.github.io/na-"
-"docs/>`_ ."
+"amigável. Muito obrigado ``dbrizov`` por essa ferramenta maravilhosa. "
+"Você pode saber `Github do NaughtyAttributes <https://dbrizov.github.io"
+"/na-docs/>`_ ."
 
-#: ../../source/index.rst:50
+#: ../../source/index.rst:97
 msgid "Where to Find IndieGabo"
 msgstr "Onde achar o IndieGabo"
 
-#: ../../source/index.rst:52
-msgid "Site"
-msgstr "Site"
-
-#: ../../source/index.rst:53
-msgid "GitHub"
+#: ../../source/index.rst:103
+msgid ""
+"Checkout this and other projects on my `Github page "
+"<https://github.com/indiegabo/>`_ ."
 msgstr ""
+"Veja este e outros projetos na minha `página do Github "
+"<https://github.com/indiegabo/>`_ ."
 
-#: ../../source/index.rst:54
-msgid "Youtube"
+#: ../../source/index.rst:113
+msgid ""
+"I use my `Youtube channel <https://youtube.com/c/indiegabooficial/>`_ to "
+"post tutorials and insights."
 msgstr ""
+"Eu uso meu `canal do Youtube <https://youtube.com/c/indiegabooficial/>`_ "
+"para  postar tutoriais e insights."
 
-#: ../../source/index.rst:55
-msgid "Twitch"
+#: ../../source/index.rst:123
+msgid ""
+"You can hang out with me while i stream on my `Twitch Channel "
+"<https://twitch.tv/indiegabo>`_."
 msgstr ""
+"Você pode bater um papo comigo enquanto eu estou streamando no meu `canal"
+" da Twitch <https://twitch.tv/indiegabo>`_."
 
-#: ../../source/index.rst:56
-msgid "Instagram"
+#: ../../source/index.rst:133
+msgid ""
+"Follow me `@indiegabo <https://instagram.com/indiegabo>`_ on my Instagram"
+" to get in touch with me on daily basis."
 msgstr ""
+"Siga `@indiegabo <https://instagram.com/indiegabo>`_ no Instagram para "
+"entrar em contato comigo no dia-a-dia."
 
 #: ../../source/index.rst:-1
 msgid "Gabinho Waving"
@@ -129,4 +208,31 @@ msgstr "Gabinho Acenando"
 
 #~ msgid ":ref:`Check out how to install it <installation-page>`."
 #~ msgstr ":ref:`Veja como instalar <installation-page>`."
+
+#~ msgid ""
+#~ "My goal is to make easy to "
+#~ "use and iterative components so you "
+#~ "can either use them as they are"
+#~ " or use them as a start point"
+#~ " to creating something awesome for "
+#~ "your game."
+#~ msgstr ""
+
+#~ msgid "Donate something <3"
+#~ msgstr "Se puder, doe algo <3"
+
+#~ msgid "Site"
+#~ msgstr "Site"
+
+#~ msgid "GitHub"
+#~ msgstr ""
+
+#~ msgid "Youtube"
+#~ msgstr ""
+
+#~ msgid "Twitch"
+#~ msgstr ""
+
+#~ msgid "Instagram"
+#~ msgstr ""
 
