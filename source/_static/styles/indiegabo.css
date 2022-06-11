@@ -25,7 +25,6 @@ html[data-theme='dark']  .k
 
 .container {
   width: 100%;
-  min-height: calc(100vh - 4rem);
   padding: 2rem;
   display: flex;
   flex-direction: column;
