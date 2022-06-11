@@ -1,0 +1,99 @@
+html[data-theme='dark'] .highlight .nf 
+{
+    color: #cb75f3 !important;
+}
+
+html[data-theme='dark'] .highlight .nn
+{
+    color: #cb75f3 !important;
+}
+
+html[data-theme='dark']  .highlight .nc
+{
+    color: #cb75f3 !important;
+}
+
+html[data-theme='dark']  .k
+{
+    color: #5c9450 !important;
+}
+
+.wy-nav-content {
+    max-width: 960px !important;
+    width: 100% !important;
+}
+
+.container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-sizing:border-box;
+}
+
+.gabo-container {
+  position: relative;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  margin-bottom: 3rem !important;
+
+  @media (min-width: $x-large-desktop) {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+.gabo-picture {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+  animation: shadow-flow 15s ease-in-out infinite;
+
+  @media (min-width: $x-large-desktop) {
+    width: 40vh;
+    height: 40vh;
+  }
+}
+
+.gabo-tag {
+  position: absolute;
+  width: 24vh;
+  bottom: -3vh;
+  left: 50%;
+  margin-left: -12vh;
+}
+
+@keyframes shadow-flow {
+    0% {
+      box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+        -5px 0 5px var(--text-gradient-color-a);
+    }
+    50% {
+      box-shadow: 0 0 30px #c57bff, -7px 0 7px var(--text-gradient-color-a),
+        7px 0 7px var(--text-gradient-color-b);
+    }
+    100% {
+      box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+        -5px 0 5px var(--text-gradient-color-a);
+    }
+  }
+  
+  @-webkit-keyframes shadow-flow {
+    0% {
+      box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+        -5px 0 5px var(--text-gradient-color-a);
+    }
+    50% {
+      box-shadow: 0 0 30px #c57bff, -7px 0 7px var(--text-gradient-color-a),
+        7px 0 7px var(--text-gradient-color-b);
+    }
+    100% {
+      box-shadow: 0 0 20px #c57bff, 5px 0 5px var(--text-gradient-color-b),
+        -5px 0 5px var(--text-gradient-color-a);
+    }
+  }

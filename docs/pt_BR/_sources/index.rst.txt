@@ -94,6 +94,7 @@ Nevertheless, if somehow you just want to donate cause you find my work useful, 
    :caption: First Steps
 
    first-steps/installation
+   first-steps/dependencies
 
 .. toctree::
    :maxdepth: 1
@@ -101,10 +102,6 @@ Nevertheless, if somehow you just want to donate cause you find my work useful, 
 
    fsm/welcome
    character-controller-2d/welcome
-
-.. note::
-    This package uses ``NaughtyAttributes`` in order to keep its inspector more pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You can check it out
-    on `NaughtyAttributes Github <https://dbrizov.github.io/na-docs/>`_ .
 
 Where to Find IndieGabo
 -----------------------

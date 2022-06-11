@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IndieGabo
+# This file is distributed under the same license as the IndieGabo's Handy
+# Tools package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: IndieGabo's Handy Tools \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-11 16:38-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.1\n"
+
+#: ../../source/first-steps/dependencies.rst:4
+msgid "Dependencies"
+msgstr "Dependências"
+
+#: ../../source/first-steps/dependencies.rst:6
+msgid ""
+"Here are the third party dependencies there are included in and used by "
+"our tools:"
+msgstr ""
+"Aqui estão as dependências de terceiros que estão inclusas e são usadas por "
+"nossas ferramentas:"
+
+#: ../../source/first-steps/dependencies.rst:8
+msgid "NaughtyAttributes:"
+msgstr ""
+
+#: ../../source/first-steps/dependencies.rst:10
+msgid ""
+"We use ``NaughtyAttributes`` in order to keep its inspector more "
+"pleasant. Huge thanks to ``dbrizov`` for this incredible tool. You can "
+"check it out on `NaughtyAttributes Github <https://dbrizov.github.io/na-"
+"docs/>`_ ."
+msgstr ""
+"Usamos ``NaughtyAttributes`` para manter o seu inspector mais agradável. "
+"Muito obrigado a ``dbrizov`` por criar essa incrível ferramenta. Dá uma "
+"olhada na `página do Github <https://dbrizov.github.io/na-docs/>`_ ."
+
+#: ../../source/first-steps/dependencies.rst:-1
+msgid "Gabinho Waving"
+msgstr "Gabinho Acenando"
+
