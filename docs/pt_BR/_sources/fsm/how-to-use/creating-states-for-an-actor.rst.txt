@@ -245,7 +245,7 @@ you use it:
    State someState = GetComponent<SomeState>();
    int priority = 1;
    
-   AddTransition(Condition, target, priority);
+   AddTransition(Condition, someState, priority);
 
 But, if you somehow prefer, here is how a StateTransition is instantiated and registered:
 
@@ -255,7 +255,7 @@ But, if you somehow prefer, here is how a StateTransition is instantiated and re
    State someState = GetComponent<SomeState>();
    int priority = 1;
    
-   StateTransition transition = new StateTransition(Condition, target, priority);
+   StateTransition transition = new StateTransition(Condition, someState, priority);
    AddTransition(transition);
 
 Note that to declare a ``Condition`` you **MUST** approach using a 

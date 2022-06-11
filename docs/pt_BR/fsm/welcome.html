@@ -19,6 +19,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
@@ -101,15 +102,15 @@
            <div itemprop="articleBody">
              
   <section id="fsm">
-<span id="welcome-fsm-page"></span><h1>FSM<a class="headerlink" href="#fsm" title="Link permanente para este título"></a></h1>
+<span id="welcome-fsm-page"></span><h1>FSM<a class="headerlink" href="#fsm" title="Link permanente para este cabeçalho"></a></h1>
 <p>Muito boas vindas a FSM do IndieGabo!</p>
 <p>Esta é uma solução de FSM (Finite State Machine, ou, Máquina de estados Finita) baseada em código para seu projeto Unity.</p>
 <section id="what-is-a-finite-state-machine">
-<h2>O que é uma Máquina de Estados Finita?<a class="headerlink" href="#what-is-a-finite-state-machine" title="Link permanente para este título"></a></h2>
+<h2>O que é uma Máquina de Estados Finita?<a class="headerlink" href="#what-is-a-finite-state-machine" title="Link permanente para este cabeçalho"></a></h2>
 <p>A Máquina de Estados Finita é um padrão de projeto focado em lidar com entidades que possuem vários estados possíveis.</p>
 </section>
 <section id="why-this-fsm">
-<h2>Porquê esta FSM?<a class="headerlink" href="#why-this-fsm" title="Link permanente para este título"></a></h2>
+<h2>Porquê esta FSM?<a class="headerlink" href="#why-this-fsm" title="Link permanente para este cabeçalho"></a></h2>
 <p>Embora saibamos que o Animator da Unity é uma Máquina de Estados, ele pode ficar confuso para se usar como um gerenciador de ações de um modo geral. Esta FSM lhe ajuda a organizar seu código mantendo a lógica das ações dos atores dentro do seu respectivo estado (vamos falar sobre atores em alguns instantes).</p>
 <p>Benefícios práticos da utilização desta FSM:</p>
 <ul class="simple">
@@ -120,12 +121,12 @@
 </ul>
 </section>
 <section id="how-it-works">
-<h2>Como funciona<a class="headerlink" href="#how-it-works" title="Link permanente para este título"></a></h2>
+<h2>Como funciona<a class="headerlink" href="#how-it-works" title="Link permanente para este cabeçalho"></a></h2>
 <p>Conside um <code class="docutils literal notranslate"><span class="pre">ator</span></code> qualquer coisa no seu jogo que realiza várias ações. A <code class="docutils literal notranslate"><span class="pre">máquina</span> <span class="pre">de</span> <span class="pre">estados</span></code> então é configurada para regular os estados de ações de um <code class="docutils literal notranslate"><span class="pre">ator</span></code>. Os estados do <code class="docutils literal notranslate"><span class="pre">ator</span></code> devem ser registrados na <code class="docutils literal notranslate"><span class="pre">máquina</span> <span class="pre">de</span> <span class="pre">estados</span></code>, sendo que um <code class="docutils literal notranslate"><span class="pre">estado</span></code> sabe exatamente quando e para qual outro <code class="docutils literal notranslate"><span class="pre">estado</span></code> transitar sob condições específicas.</p>
 <p>Além disso, para o uso desta FSM, consideramos que um <code class="docutils literal notranslate"><span class="pre">estado</span></code> não só é um tipo de status ou definição. Os estados <strong>realmente executam</strong> o que o <code class="docutils literal notranslate"><span class="pre">ator</span></code> deve fazer enquanto em um determinado <code class="docutils literal notranslate"><span class="pre">estado</span></code> de ações.</p>
 </section>
 <section id="how-to-use">
-<h2>Como usar<a class="headerlink" href="#how-to-use" title="Link permanente para este título"></a></h2>
+<h2>Como usar<a class="headerlink" href="#how-to-use" title="Link permanente para este cabeçalho"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="how-to-use/setting-up-an-actor.html">Configurando um ator</a></li>
@@ -136,7 +137,7 @@
 </div>
 </section>
 <section id="api">
-<h2>API<a class="headerlink" href="#api" title="Link permanente para este título"></a></h2>
+<h2>API<a class="headerlink" href="#api" title="Link permanente para este cabeçalho"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/actor.html">Actor</a></li>

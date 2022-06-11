@@ -19,6 +19,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
@@ -102,9 +103,9 @@
            <div itemprop="articleBody">
              
   <section id="setting-up-an-actor">
-<span id="setting-up-an-actor-page"></span><h1>Configurando um ator<a class="headerlink" href="#setting-up-an-actor" title="Link permanente para este título"></a></h1>
+<span id="setting-up-an-actor-page"></span><h1>Configurando um ator<a class="headerlink" href="#setting-up-an-actor" title="Link permanente para este cabeçalho"></a></h1>
 <section id="what-is-an-actor">
-<h2>O que é um ator?<a class="headerlink" href="#what-is-an-actor" title="Link permanente para este título"></a></h2>
+<h2>O que é um ator?<a class="headerlink" href="#what-is-an-actor" title="Link permanente para este cabeçalho"></a></h2>
 <p>Qualquer coisa que executa várias ações e portanto se beneficia de um <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> lidando com os seus estados de ação, atende ao conceito de ator para nós.</p>
 <p>Sendo assim, a classe <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> existe para ser a conexão entre a <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> e qualquer outro componente que manipule algo para o ator. Incluindo as coisas do próprio ator.</p>
 <p>ex. você pode ter um componente que lida com o movimento do ator, e outro que manipula a animação do ator. Ambos devem ter referências dentro do script do ator, e, portanto, qualquer um dos estados do ator pode acessá-los.</p>
@@ -121,17 +122,17 @@
 <p>Você pode ter quantas representações de atores quiser no seu joguinho. Sendo a classe <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a> uma abstração, apenas implemente classes que herdam da classe <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a>.</p>
 </section>
 <section id="how-it-works">
-<h2>Como funciona<a class="headerlink" href="#how-it-works" title="Link permanente para este título"></a></h2>
+<h2>Como funciona<a class="headerlink" href="#how-it-works" title="Link permanente para este cabeçalho"></a></h2>
 <p>No <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Awake()</span></code> do <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a>, ele tentará encontrar um componente <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> componente em seu próprio GameObject ou nos GameObjects filhos do seu GameObject.</p>
 <p>A partir daí a máquina irá regular os estados do ator avaliando se ele precisa transitar para outro estado em cada execução dos métodos <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Update()</span></code>, <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.FixedUpdate()</span></code> e <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.LateUpdate()</span></code> do ator.</p>
 </section>
 <section id="monobehaviour-tickers">
-<h2>Tickers do MonoBehaviour<a class="headerlink" href="#monobehaviour-tickers" title="Link permanente para este título"></a></h2>
+<h2>Tickers do MonoBehaviour<a class="headerlink" href="#monobehaviour-tickers" title="Link permanente para este cabeçalho"></a></h2>
 <p>Em cada execução dos “Frame Handlers” do MonoBehaviour do Ator, ele chamará o ticker correspondente da máquina. A máquina por sua vez chamará o método ticker do estado atual.</p>
 <p>Isso significa que todos os estados serão sincronizados com os métodos <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.Update()</span></code>, <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.FixedUpdate()</span></code> e <code class="docutils literal notranslate"><span class="pre">MonoBehaviour.LateUpdate()</span></code> MonoBehaviour do ator. Portanto, podemos dizer que todas as ações executadas estão isoladas dentro do estado respeitando o ritmo do ator.</p>
 </section>
 <section id="the-code">
-<h2>O Código<a class="headerlink" href="#the-code" title="Link permanente para este título"></a></h2>
+<h2>O Código<a class="headerlink" href="#the-code" title="Link permanente para este cabeçalho"></a></h2>
 <p>Abaixo está um bom início para criar seu próprio script de <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Ator</span></a>. Fique a vontade para copiar.</p>
 <div class="admonition important">
 <p class="admonition-title">Importante</p>

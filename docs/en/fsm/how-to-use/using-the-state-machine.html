@@ -19,6 +19,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/clipboard.min.js"></script>
         <script src="../../_static/copybutton.js"></script>
@@ -102,9 +103,9 @@
            <div itemprop="articleBody">
              
   <section id="using-the-state-machine">
-<span id="using-the-state-machine-class"></span><h1>Using the state machine<a class="headerlink" href="#using-the-state-machine" title="Permalink to this headline"></a></h1>
+<span id="using-the-state-machine-class"></span><h1>Using the state machine<a class="headerlink" href="#using-the-state-machine" title="Permalink to this heading"></a></h1>
 <section id="behold-the-state-machine">
-<h2>Behold: THE STATE MACHINE!!!<a class="headerlink" href="#behold-the-state-machine" title="Permalink to this headline"></a></h2>
+<h2>Behold: THE STATE MACHINE!!!<a class="headerlink" href="#behold-the-state-machine" title="Permalink to this heading"></a></h2>
 <p>Now that we know how to <a class="reference internal" href="setting-up-an-actor.html#setting-up-an-actor-page"><span class="std std-ref">setup an a actor</span></a> and how to <a class="reference internal" href="creating-states-for-an-actor.html#creating-states-for-an-actor-page"><span class="std std-ref">create its states</span></a>
 we can finally use the state machine.</p>
 <p>The <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> component, different from the actors and states, is a ready to use component. So you do not need to worry about creating any
@@ -112,7 +113,7 @@ script for it. Just attach to a GameObject, attach states to the same GameObject
 <p>But, if you want to understand a little about it… Let’s do it!</p>
 </section>
 <section id="life-cycle">
-<span id="lifecycle"></span><h2>Life Cycle<a class="headerlink" href="#life-cycle" title="Permalink to this headline"></a></h2>
+<span id="lifecycle"></span><h2>Life Cycle<a class="headerlink" href="#life-cycle" title="Permalink to this heading"></a></h2>
 <p>Let’s take a look at the machine’s Life Cycle:</p>
 <a class="reference internal image-reference" href="../../_images/life-cycle.jpg"><img alt="Creating actor script from menu" src="../../_images/life-cycle.jpg" style="width: 600px;" /></a>
 <div class="admonition note">
@@ -143,7 +144,7 @@ to do it).</p>
 </ol>
 </section>
 <section id="tickers-methods-and-machine-statuses">
-<h2>Tickers Methods and Machine Statuses<a class="headerlink" href="#tickers-methods-and-machine-statuses" title="Permalink to this headline"></a></h2>
+<h2>Tickers Methods and Machine Statuses<a class="headerlink" href="#tickers-methods-and-machine-statuses" title="Permalink to this heading"></a></h2>
 <p>Once the machine has started, meaning its <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> is <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code>, it will proceed passing forward the tickers methods (called inside the
 actor’s “frame handlers”) to the current state. As long as the <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> is <code class="docutils literal notranslate"><span class="pre">MachineStatus.On</span></code> it will do so.</p>
 <p>If at any time you need to pause this behaviour, you can call <code class="docutils literal notranslate"><span class="pre">StateMachine.Pause()</span></code> and it will set <code class="docutils literal notranslate"><span class="pre">StateMachine.status</span></code> to <code class="docutils literal notranslate"><span class="pre">MachineStatus.Paused</span></code>.
@@ -171,7 +172,7 @@ Consequently, none of the tickers will be passed forward to the current state, t
 </div>
 </section>
 <section id="setting-up-the-machine">
-<h2>Setting up the machine<a class="headerlink" href="#setting-up-the-machine" title="Permalink to this headline"></a></h2>
+<h2>Setting up the machine<a class="headerlink" href="#setting-up-the-machine" title="Permalink to this heading"></a></h2>
 <p>You can simply create a single GameObject and attach the <a class="reference internal" href="../api/state-machine.html#state-machine-class"><span class="std std-ref">StateMachine</span></a> component into it. Same
 goes for the <a class="reference internal" href="../api/actor.html#actor-class"><span class="std std-ref">Actor</span></a>. Take a look:</p>
 <video width="800" height="450" loop autoplay muted controls>
@@ -191,7 +192,7 @@ convenient to proceed creating an GameObject for the actor and use the machine a
 component into any GameObject, feel free to search for it using the “Add Component” inspector button.</p>
 </section>
 <section id="all-set">
-<h2>All set!<a class="headerlink" href="#all-set" title="Permalink to this headline"></a></h2>
+<h2>All set!<a class="headerlink" href="#all-set" title="Permalink to this heading"></a></h2>
 <p>Checkout the API documentation if you want to know more about these classes. For now, i’d say you have all the tools needed to start benefiting from
 the state machine!</p>
 <p>HURRAY!! Go do something awesome and let me know about it!</p>

@@ -35,7 +35,30 @@ Contribute
 
 If you want to contribute to this project, get in touch by any of my socials listed below.
 
-Do not forget to at least consider joining my patreon. bla bla bla patreon stuff. 
+Do not forget to at least consider joining my `patreon <https://patreon.com/indiegabo>`_ to own any assets i distribute in itch.io. In other words: you will be able to download
+any of my itch assets without having to spend any other money besides your patreon subscription.
+
+Nevertheless, if somehow you just want to donate cause you find my work useful, click the button below:
+
+.. raw:: html
+
+   <div id="donate-button-container">
+   <div id="donate-button"></div>
+   <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+   <script>
+   PayPal.Donation.Button({
+   env:'production',
+   hosted_button_id:'CPCRZ3KV5RNQ6',
+   image: {
+   src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+   alt:'Donate with PayPal button',
+   title:'PayPal - The safer, easier way to pay online!',
+   }
+   }).render('#donate-button');
+   </script>
+   </div>
+
+|
 
 .. toctree::
    :maxdepth: 1
