@@ -1,0 +1,1 @@
+sphinx-build -b html ./source ./../docs/en -D language=en

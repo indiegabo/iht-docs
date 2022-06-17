@@ -64,7 +64,7 @@ html_css_files = [
 ]
 
 # IMPORTANT FOR TRANSLATIONS
-locale_dirs = ['../locales/']
+locale_dirs = ['locales/']
 
 gettext_compact = False
 

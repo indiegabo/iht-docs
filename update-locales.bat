@@ -1,1 +1,0 @@
-make gettext & sphinx-intl update -p building/gettext -l en -l pt_BR
