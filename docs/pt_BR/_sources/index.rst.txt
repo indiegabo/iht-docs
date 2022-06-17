@@ -40,7 +40,7 @@ the package stable enough to get an 1.0.0 version.
 Currently Working On
 --------------------
 
-I am currently working on the :ref:`CharacterController2D <welcome-character-controller-2d-page>`.
+I am currently working on the :ref:`CharacterController2D <cc2d-welcome-page>`.
 Finishing some movement stuff like crounching and ledge grabing and looking forward to add some attacks into it.
 
 Itch Store

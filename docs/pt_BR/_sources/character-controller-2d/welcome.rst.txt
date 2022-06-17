@@ -1,4 +1,4 @@
-.. _welcome-character-controller-2d-page:
+.. _cc2d-welcome-page:
 
 CharacterController2D
 =====================
@@ -8,8 +8,38 @@ Welcome to IndieGabo's CharacterController2D.
 Who is this for?
 ----------------
 
-This is for awesome people!
+If you are creating a 2D game in Unity and want to control character's movement, attacks and other stuff... well... here are some handy 
+scripts and other assets for you.
 
+How to use
+----------
+
+Ok. Another Character Controller 2D. Why... WHY GABO?
+
+Well... as off this day I still urge creating something valuable for the game dev community. And I know that
+using another developer's code and trying to evolve from it can get a bit messy and hard achieve. 
+
+So hear me out: My goal is to detect how I can create components that you can just attach to your objects and 
+use them to perform something usefull for that ``GameObject``. But as I currently understand, it is never THAT simple.
+There will always be some piece of information that are needed to perform a task, or some information to be passed on
+to another component... Then everything becomes referencing everything and it is hard to keep track on stuff.
+
+That got me thinking and i've come up with what I call "the crafting principles" i use to make all these interactions as easy as possible while crafting a component. 
+And more. The folowing principles lead you on how to interact with my components in case you need to create your own solutions. 
+
+Checkout the :ref:`crafting principles page <cc2d-crafting-principles-page>` for more info about how i proceed crafting components.
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   how-to-use/crafting-principles
+
+API
+---
+
+.. toctree::
+   :maxdepth: 1
 
 .. raw:: html
 

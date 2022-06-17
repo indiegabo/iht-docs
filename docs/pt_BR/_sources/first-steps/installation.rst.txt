@@ -6,6 +6,18 @@ Installation
 .. note::
     IndieGabo's Handy Tools requires **Unity 2019.4** or later versions.
 
+Download
+--------
+
+1. Download only one package containing everything:
+
+* :download:`Full_1.0.0-alpha <../_static/downloads/Full_1.0.0-alpha.zip>`
+
+2. Download Core + the extensions you need:
+
+.. * :download:`Core_1.0.0-alpha <../_static/downloads/Core_1.0.0-alpha.zip>`
+.. * :download:`Platformer_1.0.0-alpha <../_static/downloads/Platformer_1.0.0-alpha.zip>`
+.. * :download:`Envinronmental1.0.0-alpha <../_static/downloads/Envinronmental_1.0.0-alpha.zip>`
 
 1. If you are only interested in the api:
 

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt-BR" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crafting Principles &mdash; documentação IndieGabo&#39;s Handy Tools 0.0.1</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/styles/indiegabo.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/general.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/dark_mode_css/dark.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script src="../../_static/dark_mode_js/default_dark.js"></script>
+        <script src="../../_static/dark_mode_js/theme_switcher.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../genindex.html" />
+    <link rel="search" title="Buscar" href="../../search.html" />
+    <link rel="prev" title="CharacterController2D" href="../welcome.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> IndieGabo's Handy Tools
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Primeiros Passos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../first-steps/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../first-steps/dependencies.html">Dependências</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ferramentas Disponíveis</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../fsm/welcome.html">FSM</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../welcome.html">CharacterController2D</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#who-is-this-for">Para quem é esta ferramenta?</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../welcome.html#how-to-use">How to use</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Crafting Principles</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-i-interface-my-purpose-principle">The “I interface my purpose” principle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-i-can-seek-for-information-principle">The “I can seek for information” principle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-you-can-directly-ask-me-principle">The “you can directly ask me” principle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../welcome.html#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">IndieGabo's Handy Tools</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../welcome.html">CharacterController2D</a> &raquo;</li>
+      <li>Crafting Principles</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/character-controller-2d/how-to-use/crafting-principles.rst.txt" rel="nofollow"> Ver código-fonte da página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="crafting-principles">
+<span id="cc2d-crafting-principles-page"></span><h1>Crafting Principles<a class="headerlink" href="#crafting-principles" title="Link permanente para este cabeçalho"></a></h1>
+<p>Here are the 3 principles I use to craft any component in this package:</p>
+<ol class="arabic simple">
+<li><p>I interface my purpose - So everyone know how to interact with me.</p></li>
+<li><p>I can seek for information - So you don’t need to know me. Just leave an open door and i’ll get it.</p></li>
+<li><p>You can directly ask me - In case you prefer to be specific about me.</p></li>
+</ol>
+<p>Lets dive on each of them.</p>
+<section id="the-i-interface-my-purpose-principle">
+<h2>The “I interface my purpose” principle<a class="headerlink" href="#the-i-interface-my-purpose-principle" title="Link permanente para este cabeçalho"></a></h2>
+<p>For us a component may have any of these traits:</p>
+<ul class="simple">
+<li><p>Performer - Meaning it exists to perform some kind of action.</p></li>
+<li><p>Handler - Meaning it exists to handle another component.</p></li>
+<li><p>Provider - Meaning it exists to provide some kind of information.</p></li>
+</ul>
+<p>Have in mind that a component can have multiple traits and a trait represents a purpose for that component to live by.</p>
+<p>We ensure components communication by setting  <a class="reference external" href="https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/keywords/interface">interfaces</a>
+wich expose the traits.</p>
+<p>For example, take our <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component. You can attach it to some object, configure it and you will be able to benefit from it. If at any
+time you need a reference to my <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component, you would do something like the following:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">DynamicJump2D</span><span class="w"> </span><span class="n">jump</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">DynamicJump2D</span><span class="p">&gt;();</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Ok. Now, the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component must have a handler among the other components of its <code class="docutils literal notranslate"><span class="pre">GameObject</span></code>. An example of one i’ve build and is available, is
+the <code class="docutils literal notranslate"><span class="pre">PCActions</span></code> (Playable Character Actions) component. It is responsible for handling the actions of the <code class="docutils literal notranslate"><span class="pre">GameObject</span></code> it is attached to. And since a jump can be
+considered an action, the <code class="docutils literal notranslate"><span class="pre">PCActions</span></code> will handle the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component and tell it when to perform and stop jumps.</p>
+<p>So we would expect the <code class="docutils literal notranslate"><span class="pre">PCActions</span></code> to have a reference to the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PCActions</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="n">DynamicJump2D</span><span class="w"> </span><span class="n">jump</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">jump</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">DynamicJump2D</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Awesome! From there on we would be able to perform jump stuff by calling the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> correct methods. But I consider <strong>you should be free to write
+your own component to handle / perform dynamic 2D jumps</strong> <a class="footnote-reference brackets" href="#f1" id="id1">1</a>. Actually, any component you want to write in order to perform anything while interacting with my components,
+i find that you should be able to do it and still benefit from my components wich you see fit as a solution for your game.</p>
+<p>Because of that, <code class="docutils literal notranslate"><span class="pre">PCActions</span></code> won’t have a reference to the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component. Instead it will declare itself as a “dynamic jump 2D handler”
+and will allow the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component to find it and listen to events that state what it should do. So… for the sake of a use case example, I
+present to you the <code class="docutils literal notranslate"><span class="pre">IDynamicJump2DHandler</span></code> interface.</p>
+<p>Take a look:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">IndieGabo.CharacterController2D.Abilities2D</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">/// &lt;summary&gt;</span>
+<span class="w">    </span><span class="c1">/// Any component that implements this interface will be able to handle dynamic 2D jumps</span>
+<span class="w">    </span><span class="c1">/// by invoking its methods..</span>
+<span class="w">    </span><span class="c1">/// &lt;/summary&gt;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IDynamicJump2DHandler</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">UnityEvent</span><span class="w"> </span><span class="n">SendJumpRequest</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">UnityEvent</span><span class="w"> </span><span class="n">SendJumpStop</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This <code class="docutils literal notranslate"><span class="pre">interface</span></code> forces whatever implements it to give access to 2 Unity Events. One to request a jump to be performed and other to demand a jump to be stoped.
+So as a Handler whenever you want a jump to be performed use the <code class="docutils literal notranslate"><span class="pre">SendJumpRequest.Invoke()</span></code> approach. Same goes for when you want to stop a jump with
+<code class="docutils literal notranslate"><span class="pre">SendJumpStop.Invoke()</span></code>.</p>
+<p>That allows us to, while crafting a “dynamic jump 2D performer” component, find any <code class="docutils literal notranslate"><span class="pre">IDynamicJump2DHandler</span></code> among its <code class="docutils literal notranslate"><span class="pre">GameObject</span></code> components and listen to its
+events. Then, every time a <code class="docutils literal notranslate"><span class="pre">SendJumpRequest</span></code> is invoked by its handler, the component will receive it on its callback and handle if it should jump or not.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyJumpPerformer</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="w">  </span><span class="n">IDynamicJump2DHandler</span><span class="w"> </span><span class="n">jumpHandler</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">jumpHandler</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">IDynamicJump2DHandler</span><span class="p">&gt;();</span><span class="w"></span>
+<span class="w">    </span><span class="n">jumpHandler</span><span class="p">?.</span><span class="n">SendJumpRequest</span><span class="p">.</span><span class="n">AddListener</span><span class="p">(</span><span class="n">Request</span><span class="p">);</span><span class="w"> </span><span class="c1">// Listen to Jump Requests</span>
+<span class="w">    </span><span class="n">jumpHandler</span><span class="p">?.</span><span class="n">SendJumpStop</span><span class="p">.</span><span class="n">AddListener</span><span class="p">(</span><span class="n">Stop</span><span class="p">);</span><span class="w"> </span><span class="c1">// Listen to Stop demands</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">void</span><span class="w"> </span><span class="nf">OnDisable</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">jumpHandler</span><span class="p">?.</span><span class="n">SendJumpRequest</span><span class="p">.</span><span class="n">RemoveListener</span><span class="p">(</span><span class="n">Request</span><span class="p">);</span><span class="w"> </span><span class="c1">// Stop listening to Jump Requests</span>
+<span class="w">    </span><span class="n">jumpHandler</span><span class="p">?.</span><span class="n">SendJumpStop</span><span class="p">.</span><span class="n">RemoveListener</span><span class="p">(</span><span class="n">Stop</span><span class="p">);</span><span class="w"> </span><span class="c1">// Stop listening to Stop demands</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">void</span><span class="w"> </span><span class="nf">Request</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Evaluate if jump can be perfomed and start it if so</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">void</span><span class="w"> </span><span class="nf">Stop</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Stop any jump in progress</span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Well… we can easily see now how to benefit from the <a class="reference external" href="https://docs.unity3d.com/Packages/com.unity.inputsystem&#64;1.0/manual/QuickStartGuide.html">unity’s input system</a> .
+When jump button is pressed: <code class="docutils literal notranslate"><span class="pre">SendJumpRequest.Invoke()</span></code>. When jump button is released: <code class="docutils literal notranslate"><span class="pre">SendJumpStop.Invoke()</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>If you are not familiar with Unity Events you can <a class="reference external" href="https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html">click here</a> and learn a bit more.</p>
+</div>
+<p>So, if you want to build your own handler for my <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component, just implement the <code class="docutils literal notranslate"><span class="pre">IDynamicJump2DHandler</span></code> interface and activate the “Seek For Handler”
+option in the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component inspector window. Make sure to attach both components to the same <code class="docutils literal notranslate"><span class="pre">GameObject</span></code>.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Seeker&quot;</span><span class="w"> </span><span class="n">video</span><span class="w"></span>
+</pre></div>
+</div>
+<p>I use this strategy to all traits presented here. For another example you will find interfaces like <code class="docutils literal notranslate"><span class="pre">IGroundingProvider</span></code> so you can listen for updates
+on the <code class="docutils literal notranslate"><span class="pre">GameObject</span></code> being or not considered grounded. Even another example is the  <code class="docutils literal notranslate"><span class="pre">IDynamicDash2DPerformer</span></code> wich will allow you to find components that perform
+dynamic 2D dashes and listen for when the dash occur.</p>
+<p>This is it for this first and most important principle. It is the “i interface my purpose” principle that glue all components together and allow you to
+grow your components from my work.</p>
+</section>
+<section id="the-i-can-seek-for-information-principle">
+<h2>The “I can seek for information” principle<a class="headerlink" href="#the-i-can-seek-for-information-principle" title="Link permanente para este cabeçalho"></a></h2>
+<p>As seen in the previous principle, the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> can seek for its handler if you mark the inspector’s option. Well… it is not the only one.</p>
+<p>All components that need some kind of information will have the option to seek for a component to feed that piece of intel under the “Seekers” section of it
+inspector window.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Todo</span><span class="p">:</span><span class="w"> </span><span class="n">Seeker</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="n">image</span><span class="w"></span>
+</pre></div>
+</div>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">DynamicDash2D</span></code> needs to know about the grounding status of the <code class="docutils literal notranslate"><span class="pre">GameObject</span></code> it is attached to. In order to receive updates about grounding
+it can seek for a “grounding provider” wich will be a component that implements the <code class="docutils literal notranslate"><span class="pre">IGroundingProvider</span></code> interface. This way you can use my <code class="docutils literal notranslate"><span class="pre">GoundingChecker2D</span></code>
+component or implement your own component that provides information about its <code class="docutils literal notranslate"><span class="pre">GameObject</span></code> grounding status. All you will need to do is to make sure it implements
+the <code class="docutils literal notranslate"><span class="pre">IGroundingProvider</span></code> interface and the <code class="docutils literal notranslate"><span class="pre">DynamicDash2D</span></code> will be able to find it and listen to the event that provides grounding information.</p>
+</section>
+<section id="the-you-can-directly-ask-me-principle">
+<h2>The “you can directly ask me” principle<a class="headerlink" href="#the-you-can-directly-ask-me-principle" title="Link permanente para este cabeçalho"></a></h2>
+<p>Lastly, althoug I find it better to components be crafted “event drivenly” I like to leave open doors for a direct approach. And that is the reason for
+the “Seekers” section of my components on the inspector window to be completly optional. They <strong>CAN</strong> seek for information but if you prefer you can
+directly feed the information they need and it will be documented on that component’s page what method you can use to achieve that.</p>
+<p>For example, the <code class="docutils literal notranslate"><span class="pre">DynamicJump2D</span></code> component have an <code class="docutils literal notranslate"><span class="pre">UpdateGrounding(bool</span> <span class="pre">newGrounding)</span></code> method wich is exactly the method used as callback when the
+“seek for grounding provider” option is enabled. So, when creating you own provider, if the “interfancing and eventing” approach is not for you,
+just call the feeding method and pass in the argument your logic came up with.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="n">grounded</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MyWayToDetectGrounding</span><span class="p">();</span><span class="w"></span>
+<span class="n">jump</span><span class="p">.</span><span class="n">UpdateGrounding</span><span class="p">(</span><span class="n">grounded</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>And with that we end the principles. Now you can start looking at specific components documentation pages and understand how to interact and use them.</p>
+<div style="clear: both;"></div><a class="reference internal image-reference" href="../../_images/gabinho.png"><img alt="Gabinho Waving" class="align-right" src="../../_images/gabinho.png" style="width: 80px;" /></a>
+<div style="clear: both;"></div><dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Dynamic 2D components are the ones wich handle a RigidBody2D set to dynamic.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="../welcome.html" class="btn btn-neutral float-left" title="CharacterController2D" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, IndieGabo.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
